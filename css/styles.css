@@ -1,0 +1,187 @@
+/* -------------------------
+   BASIC RESET
+------------------------- */
+@font-face {
+    font-family: 'Lucida Grande'; /* Give your font a name */
+    src: url('../font/Lucida-Grande.otf') format('opentype');
+    font-weight: normal; /* Optional: Set font weight */
+    font-style: normal; /* Optional: Set font style */
+}
+
+body { 
+    font-family: 'Lucida Grande';
+    background-color: #fff;
+    color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -------------------------
+   HEADER STYLES
+------------------------- */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background-color: white;
+    font-family: 'Lucida Grande';
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo-language-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+
+.language-button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.language-button img {
+    width: 50px;
+    height: auto;
+}
+
+
+/* -------------------------
+   NAV BAR
+------------------------- */
+.nav-bar {
+    display: flex;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    background-color: #013199;
+    color: white;
+}
+
+/* Mobile Menu Button (Hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* -------------------------
+   Floating buttons
+------------------------- */
+.language-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.language-button img {
+    width: 30px;
+    height: 20px;
+}
+
+
+/* Small devices (phones, 768px and down) */
+@media (max-width: 768px) {
+    /* Nav bar */
+    .nav-bar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        list-style: none;
+    }
+
+    .nav-bar a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Hover effect for mobile */
+    .nav-bar a:hover {
+        background-color: rgba(1, 49, 153, 0.1);
+    }
+    
+    /* Active menu state */
+    .nav-bar.active {
+        display: block;
+    }
+    
+    /* Active link inside the mobile menu */
+    .nav-bar.active a.active {
+        background-color: #013199;
+        color: white;
+        font-weight: bold;
+    }
+    
+    /* Mobile menu toggle button */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
