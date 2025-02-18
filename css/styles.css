@@ -367,10 +367,6 @@ body {
         min-height: calc(70vh);
     }
 
-    .floating-button-container:hover .sub-floating-list {
-        display: none;
-    }
-
     .floating-button-container.active .sub-floating-list {
         display: flex;
     }
