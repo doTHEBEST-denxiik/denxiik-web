@@ -314,13 +314,11 @@ body {
 }
 
 /* -------------------------
-    Software SECTION
+    development-section SECTIONS
 ------------------------- */
-.software {
-    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
-        url("../img/codecode.webp") center/cover no-repeat;
+.development-section {
     width: 95%;
-    margin: 1rem auto;
+    margin: 3rem auto;
     position: relative;
     border-radius: 30px;
     min-height: calc(70vh);
@@ -335,32 +333,43 @@ body {
     box-sizing: border-box;
 }
 
-.software .content {
+.development-section .content {
     position: relative;
     left: 1rem;
     top: 2rem;
     color: white;
-    width: 50%;
+    width: 45%;
 }
 
 
-.software .content .title {
+.development-section .content .title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.software .content .subtitle {
+.development-section .content .subtitle {
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-.software .content .subtitle a {
+.development-section .content .subtitle a {
     text-decoration: none;
     color: lightgray;
 }
 
-.software .content .subtitle a:hover {
+.development-section .content .subtitle a:hover {
     color: lightblue;
+}
+
+.software{
+background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("../img/codecode.webp") center/cover no-repeat;
+}
+
+.self-development{
+    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("../img/self-development.jpg") center/cover no-repeat;
+    
 }
 
 
@@ -452,14 +461,14 @@ body {
     }
 
     /* -------------------------
-        Software SECTION
+        development-section SECTION
     ------------------------- */
-    .software {
+    .development-section {
         flex-direction: column;
         align-items: center;
     }
 
-    .software .content {
+    .development-section .content {
         width: 90%;
         text-align: center;
         margin-bottom: 2rem;
