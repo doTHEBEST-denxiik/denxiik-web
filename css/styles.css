@@ -95,6 +95,7 @@ body {
 ------------------------- */
 .nav-bar {
     display: flex;
+    
 }
 
 .nav-bar ul {
@@ -392,7 +393,7 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: white;
+        background-color: #1e2022;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -408,14 +409,14 @@ body {
         padding: 1rem;
         text-align: center;
         font-size: 1.2rem;
-        color: #333;
+        color: white;
         text-decoration: none;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Hover effect for mobile */
     .nav-bar a:hover {
-        background-color: rgba(1, 49, 153, 0.1);
+        background-color: #013199;
     }
 
     /* Active menu state */
