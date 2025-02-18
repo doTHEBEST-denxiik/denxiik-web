@@ -363,7 +363,7 @@ body {
 
 .software{
 background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
-        url("../img/codecode.webp") center/cover no-repeat;
+        url("../img/software-development.webp") center/cover no-repeat;
 }
 
 .self-development{
