@@ -2,16 +2,19 @@
    BASIC RESET
 ------------------------- */
 @font-face {
-    font-family: 'Lucida Grande'; /* Give your font a name */
+    font-family: 'Lucida Grande';
+    /* Give your font a name */
     src: url('../font/Lucida-Grande.otf') format('opentype');
-    font-weight: normal; /* Optional: Set font weight */
-    font-style: normal; /* Optional: Set font style */
+    font-weight: normal;
+    /* Optional: Set font weight */
+    font-style: normal;
+    /* Optional: Set font style */
 }
 
-body { 
+body {
     font-family: 'Lucida Grande';
     background-color: #181a1b;
-    color: #fff;
+    color: white;
 }
 
 * {
@@ -20,6 +23,24 @@ body {
     box-sizing: border-box;
 }
 
+.video-container {
+    position: relative;
+    top: 2rem;
+    width: 49%;
+    padding-bottom: 27.56%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+}
 
 /* -------------------------
    HEADER STYLES
@@ -54,7 +75,6 @@ body {
     width: auto;
 }
 
-
 .language-button {
     position: relative;
     background-color: transparent;
@@ -88,7 +108,7 @@ body {
 .nav-bar a {
     text-decoration: none;
     font-weight: bolder;
-    color: #74acf8;
+    color: white;
     padding: 0.6rem 1rem;
     border-radius: 999px;
     transition: background-color 0.3s ease;
@@ -135,14 +155,16 @@ body {
     background-color: rgba(30, 32, 34, 255);
     border-radius: 25px;
     padding: 5px;
-    list-style: none; /* Remove bullet points */
-    padding-left: 0; /* Remove default left padding of the list */
+    list-style: none;
+    /* Remove bullet points */
+    padding-left: 0;
+    /* Remove default left padding of the list */
 }
 
 .sub-floating-list li {
     margin-bottom: 5px;
     background-color: transparent;
-    color: #74acf8;
+    color: white;
     padding: 8px 12px;
     border-radius: 25px;
     cursor: pointer;
@@ -165,11 +187,11 @@ body {
 /* Style the main floating button */
 .main-floating-button {
     background-color: rgba(30, 32, 34, 255);
-    color: #74acf8;
+    color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 25px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     z-index: 999;
 }
@@ -206,7 +228,6 @@ body {
     border-radius: 30px;
     min-height: calc(90vh);
     overflow: hidden;
-    color: #fff;
 
     /* Flexbox to center content */
     display: flex;
@@ -220,8 +241,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color:#1e2022;
-    color: #74acf8;
+    background-color: rgba(30, 32, 34, 0.7);
 
     /* Specific corner rounding */
     border-top-left-radius: 20px;
@@ -252,7 +272,7 @@ body {
 .dedication {
     /* Gradient plus background image */
     background:
-    linear-gradient(120deg, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0.5) 90%),
+        linear-gradient(120deg, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0.5) 90%),
         url("../img/progress_sharring.jpg") center/cover no-repeat;
 
     /* Container settings */
@@ -262,7 +282,7 @@ body {
     border-radius: 30px;
     min-height: calc(30vh);
     overflow: hidden;
-    color: #fff;
+    color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
     /* Flexbox to center content */
@@ -278,23 +298,83 @@ body {
     top: 40%;
     left: 5%;
     transform: translateY(-50%);
-    color: #fff;
-    max-width: 65%;
+    color: white;
 }
 
 .dedication .content .title {
-    font-size: 5.5rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .dedication .content .subtitle {
-    font-size: 4.2rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
+/* -------------------------
+    Software SECTION
+------------------------- */
+.software {
+    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("../img/codecode.webp") center/cover no-repeat;
+    width: 95%;
+    margin: 1rem auto;
+    position: relative;
+    border-radius: 30px;
+    min-height: calc(70vh);
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.software .content {
+    position: relative;
+    left: 1rem;
+    top: 2rem;
+    color: white;
+    width: 50%;
+}
+
+
+.software .content .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.software .content .subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.software .content .subtitle a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.software .content .subtitle a:hover {
+    color: lightblue;
+}
+
+
+/* Simple responsive fix (example for smaller screens) */
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+    .home-stats-card {
+        /* Specific corner rounding */
+        border-top-left-radius: 0px;
+    }
+}
 
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
+
     /* Nav bar */
     .nav-bar {
         display: none;
@@ -322,27 +402,71 @@ body {
         text-decoration: none;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
-    
+
     /* Hover effect for mobile */
     .nav-bar a:hover {
         background-color: rgba(1, 49, 153, 0.1);
     }
-    
+
     /* Active menu state */
     .nav-bar.active {
         display: block;
     }
-    
+
     /* Active link inside the mobile menu */
     .nav-bar.active a.active {
         background-color: #013199;
         color: white;
         font-weight: bold;
     }
-    
+
     /* Mobile menu toggle button */
     .menu-toggle {
         display: block;
         cursor: pointer;
     }
+
+    /* -------------------------
+        Dedication SECTION
+    ------------------------- */
+    .dedication .content .title {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .dedication .content .subtitle {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    /* -------------------------
+    Software SECTION
+------------------------- */
+    .software {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .software .content {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .video-container {
+        width: 90%;
+        padding-bottom: 50.625%;
+        margin-top: 10px;
+    }
+
+    .video-container iframe {
+        height: 100%;
+    }
 }
+
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
