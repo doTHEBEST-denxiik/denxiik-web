@@ -124,11 +124,11 @@ body {
     z-index: 1000;
 }
 
-.floating-button-container:hover .sub-floating-list {
+.floating-button-container.active .sub-floating-list {
     display: flex;
 }
 
-.floating-button-container:hover .main-floating-button {
+.floating-button-container.active .main-floating-button {
     display: none;
 }
 
@@ -365,14 +365,6 @@ body {
 @media (max-width: 576px) {
     .home {
         min-height: calc(70vh);
-    }
-
-    .floating-button-container.active .sub-floating-list {
-        display: flex;
-    }
-    
-    .floating-button-container.active .main-floating-button {
-        display: none;
     }
 }
 
