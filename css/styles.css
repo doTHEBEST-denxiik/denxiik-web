@@ -377,6 +377,12 @@ background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 25
 
 
 /* Simple responsive fix (example for smaller screens) */
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+    .home {
+        min-height: calc(70vh);
+    }
+}
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
     .video-container {
