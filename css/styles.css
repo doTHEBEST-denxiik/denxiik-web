@@ -72,27 +72,13 @@ body {
     width: auto;
 }
 
-.language-button {
-    position: relative;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-.language-button img {
-    width: 50px;
-    height: auto;
-}
-
 
 /* -------------------------
    NAV BAR
 ------------------------- */
 .nav-bar {
     display: flex;
-    
+
 }
 
 .nav-bar ul {
@@ -154,9 +140,7 @@ body {
     border-radius: 25px;
     padding: 5px;
     list-style: none;
-    /* Remove bullet points */
     padding-left: 0;
-    /* Remove default left padding of the list */
 }
 
 .sub-floating-list li {
@@ -358,21 +342,21 @@ body {
     color: lightblue;
 }
 
-.software{
-background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+.software {
+    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
         url("../img/software-development.webp") center/cover no-repeat;
 }
 
-.self-development{
+.self-development {
     background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
         url("../img/self-development.jpg") center/cover no-repeat;
-    
+
 }
 
-.sport-development{
+.sport-development {
     background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
         url("../img/sport-development.jpg") center/cover no-repeat;
-    
+
 }
 
 
@@ -382,7 +366,20 @@ background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 25
     .home {
         min-height: calc(70vh);
     }
+
+    .floating-button-container:hover .sub-floating-list {
+        display: none;
+    }
+
+    .floating-button-container.active .sub-floating-list {
+        display: flex;
+    }
+    
+    .floating-button-container.active .main-floating-button {
+        display: none;
+    }
 }
+
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
     .video-container {
@@ -453,6 +450,7 @@ background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 25
     .home-stats-card .stat h2 {
         font-size: 2rem;
     }
+
     .home-stats-card {
         width: 100%;
         border-top-left-radius: 0px;
@@ -494,7 +492,7 @@ background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 25
     .menu-toggle {
         font-size: 2.5rem;
     }
-    
+
     .sub-floating-list li {
         font-size: 1.5rem;
     }
@@ -511,14 +509,15 @@ background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 25
     .home-stats-card .stat h2 {
         font-size: 4rem;
     }
-    
+
     .dedication .content .title {
         font-size: 2.5rem;
     }
-    
+
     .dedication .content .subtitle {
         font-size: 2rem;
     }
+
     .nav-bar a {
         font-size: 1.5rem;
     }
