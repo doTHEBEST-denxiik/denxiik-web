@@ -481,8 +481,37 @@ background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 25
     }
 }
 
-/* Large devices (desktops, 992px and down) */
-@media (max-width: 992px) {}
-
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .menu-toggle {
+        font-size: 2.5rem;
+    }
+    
+    .sub-floating-list li {
+        font-size: 1.5rem;
+    }
+
+    .main-floating-button {
+        font-size: 2rem;
+    }
+
+    .language-button img {
+        width: 40px;
+        height: 30px;
+    }
+
+    .home-stats-card .stat h2 {
+        font-size: 4rem;
+    }
+    
+    .dedication .content .title {
+        font-size: 2.5rem;
+    }
+    
+    .dedication .content .subtitle {
+        font-size: 2rem;
+    }
+    .nav-bar a {
+        font-size: 1.5rem;
+    }
+}
