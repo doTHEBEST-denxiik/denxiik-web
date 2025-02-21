@@ -333,11 +333,13 @@ body {
     font-weight: bold;
 }
 
-.development-section .content .subtitle a {
+.development-section .content .title a,
+.development-section .content .subtitle a{
     text-decoration: none;
     color: lightgray;
 }
 
+.development-section .content .title a:hover,
 .development-section .content .subtitle a:hover {
     color: lightblue;
 }
