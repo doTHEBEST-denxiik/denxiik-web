@@ -326,6 +326,7 @@ body {
 .development-section .content .title {
     font-size: 2.5rem;
     margin: 1rem;
+    padding: 1rem;
 }
 
 .development-section .content .subtitle {
