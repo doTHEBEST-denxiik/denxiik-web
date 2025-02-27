@@ -369,6 +369,10 @@ body {
     .home {
         min-height: calc(70vh);
     }
+
+    .development-section .content .title {
+        font-size: 2rem;
+    }
 }
 
 /* Small devices (phones, 768px and down) */
