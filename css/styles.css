@@ -199,7 +199,7 @@ body {
    HOME SECTION
 ------------------------- */
 .home {
-    /* Gradient plus background image */
+    /* background image */
     background:
         url("../img/denxiik.gif") center/cover no-repeat;
 
@@ -335,7 +335,7 @@ body {
 }
 
 .development-section .content .title a,
-.development-section .content .subtitle a{
+.development-section .content .subtitle a {
     text-decoration: none;
     color: lightgray;
 }
@@ -360,6 +360,43 @@ body {
     background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
         url("../img/sport-development.jpg") center/cover no-repeat;
 
+}
+
+/* -------------------------
+    doTHEWORKOUT subpage
+------------------------- */
+.doTHEWORKOUT {
+    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("../img/easy_leon.jpg") center/cover no-repeat;
+
+}
+
+.playstore-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.playstore-button:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+}
+
+.playstore-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
 
