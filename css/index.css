@@ -1,0 +1,69 @@
+@import url('styles.css');
+
+/* -------------------------
+   HOME SECTION
+------------------------- */
+.home {
+    /* background image */
+    background:
+        url("../img/denxiik.gif") center/cover no-repeat;
+
+    /* Container settings */
+    width: 100%;
+    position: static;
+    height: calc(102vh);
+
+    /* Flexbox to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    z-index: -1;
+}
+
+/* Stats card in the bottom-right corner */
+.home-stats-card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(30, 32, 34, 0.7);
+
+    /* Specific corner rounding */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    /* Increase padding for a larger card */
+    padding: 2rem 0.5rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.home-stats-card .stat {
+    text-align: center;
+    flex: 1;
+}
+
+.home-stats-card .stat h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Small devices (phones, 768px and down) */
+@media (max-width: 768px) {
+
+    /* -------------------------
+        HOME SECTION
+    ------------------------- */
+    .home-stats-card .stat h2 {
+        font-size: 2rem;
+    }
+
+    .home-stats-card {
+        width: 100%;
+        border-top-left-radius: 0px;
+    }
+
+}

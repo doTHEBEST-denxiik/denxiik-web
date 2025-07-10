@@ -1,0 +1,269 @@
+@import url('styles.css');
+
+/* -------------------------
+    HEADER STYLES
+------------------------- */
+.site-header {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 1200px;
+    background-color: var(--primary);
+    display: flex;
+    border-radius: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo-language-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: block;
+}
+
+.logo {
+    height: 5rem;
+}
+
+.nav-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar li {
+    margin: 0rem 0.5rem;
+    position: relative;
+}
+
+.nav-bar li a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    transition: color 0.3s ease;
+    text-align: center;
+    padding: 0.5rem 0.8rem; /* Added padding to navigation links */
+}
+
+.nav-bar a:hover {
+    color: var(--third);
+}
+
+.dropdown-content {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block !important;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    color: var(--third);
+}
+
+/* "COLABORA" Button Styling */
+.colaborate-button {
+    background-color: var(--secondary);
+    margin-left: 1rem;
+    padding: 0.8rem 1.5rem; /* Added padding for the button */
+    border: none;
+    border-radius: 50px; /* Make it more rounded */
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: var(--secondary);
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    order: 1;
+    margin-left: auto;
+    padding: 0.5rem; /* Added padding to toggle button */
+}
+
+/* Small devices (desktops, 1080px and down) */
+@media (max-width: 1080px) {
+
+    .logo-language-contFainer {
+        width: auto;
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+
+    .logo {
+        padding-left: 0; /* Remove left padding */
+        height: 3rem;
+    }
+
+    .nav-button-container {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        padding-right: 1rem;
+        margin-left: auto;
+    }
+
+    /* Position the initially hidden navigation bar */
+    .nav-bar {
+        margin-left: auto;
+        position: absolute;
+        top: 6rem;
+        /* Below the header */
+        left: 0;
+        width: 100%;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: var(--primary);
+        border-radius: 35px;
+        z-index: 10;
+        display: none;
+        /* Hidden by default */
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items horizontally */
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        list-style: none;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .nav-bar li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-bar li a {
+        display: block;
+        margin-top: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Colaborate button on small screens */
+    .nav-bar .colaborate-button {
+        margin: 1.5rem 1rem 1rem 1rem;
+        order: 1;
+        padding: 1rem;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none !important;
+    }
+
+    .dropdown>a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .dropdown>a::after {
+        content: '▼';
+        font-size: 1rem;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown.active>a::after {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-content {
+        display: none !important;
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        min-width: unset;
+        width: 100%;
+        padding: 0;
+    }
+
+    .dropdown-content li a {
+        padding-left: 30px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .dropdown-content li a:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active .dropdown.active .dropdown-content {
+        display: block !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .nav-bar li a {
+        margin: 1rem;
+    }
+}
