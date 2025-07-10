@@ -42,4 +42,54 @@ function initializeLanguageOptions() {
             languageOptions.classList.remove('show');
         }
     });
+
+    
+        const floatingButtonContainer = document.querySelector('.floating-button-container');
+        const mainFloatingButton = document.querySelector('.main-floating-button');
+
+        mainFloatingButton.addEventListener('click', () => {
+            floatingButtonContainer.classList.toggle('active');
+        });
+
+        // Close the list if the user clicks outside of the container
+        window.addEventListener('click', (event) => {
+            if (!floatingButtonContainer.contains(event.target)) {
+                floatingButtonContainer.classList.remove('active');
+            }
+        });
+
+        // Menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-bar').classList.toggle('active');
+        });
+
+        // Contact functionality
+        document.querySelectorAll("#emailButton, #emailContact").forEach(element => {
+            element.addEventListener("click", function () {
+                var email = "borisevich16102002@gmail.com";
+                var subject = encodeURIComponent("Consulta");
+                var body = encodeURIComponent("Hola,\n\nEstoy interesado en conocerte más.");
+
+                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+                var gmailWebLink = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + subject + "&body=" + body;
+                var gmailAppAndroid = "intent://compose?to=" + email + "&subject=" + subject + "&body=" + body + "#Intent;scheme=mailto;package=com.google.android.gm;end;";
+
+                var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+                var isAndroid = /Android/i.test(navigator.userAgent);
+
+                if (isAndroid) {
+                    window.location.href = gmailAppAndroid;
+                } else if (isIOS) {
+                    window.open(gmailWebLink, "_blank");
+                } else {
+                    window.location.href = mailtoLink;
+                }
+
+                setTimeout(function () {
+                    if (confirm("¿No se abrió ningún cliente de correo? ¿Quieres abrir Gmail en su lugar?")) {
+                        window.open(gmailWebLink, "_blank");
+                    }
+                }, 2000);
+            })
+        });
 }

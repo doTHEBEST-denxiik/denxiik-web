@@ -8,14 +8,14 @@
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 2rem);
+    width: calc(100% - 4rem);
     max-width: 1200px;
     background-color: var(--primary);
     display: flex;
     border-radius: 100px;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.6rem 1rem;
     box-sizing: border-box;
     z-index: 1000;
 }
@@ -121,8 +121,6 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-
 .menu-toggle {
     display: none;
     background: none;
@@ -133,6 +131,70 @@
     order: 1;
     margin-left: auto;
     padding: 0.5rem; /* Added padding to toggle button */
+}
+
+/* -------------------------
+   Floating buttons
+------------------------- */
+.floating-button-container {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.floating-button-container.active .sub-floating-list {
+    display: flex;
+}
+
+.floating-button-container.active .main-floating-button {
+    display: none;
+}
+
+.sub-floating-list {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: var(--primary);
+    border-radius: 25px;
+    padding: 5px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.sub-floating-list li {
+    margin-bottom: 5px;
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+}
+
+.sub-floating-list li:hover {
+    background-color: var(--secondary)
+}
+
+.sub-floating-list li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+/* Style the main floating button */
+.main-floating-button {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 999;
 }
 
 /* Small devices (desktops, 1080px and down) */
@@ -206,7 +268,7 @@
         text-decoration: none;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
-    
+
     /* Colaborate button on small screens */
     .nav-bar .colaborate-button {
         margin: 1.5rem 1rem 1rem 1rem;
