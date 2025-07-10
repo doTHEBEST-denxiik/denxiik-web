@@ -1,0 +1,557 @@
+
+/* -------------------------
+   BASIC RESET
+------------------------- */
+@font-face {
+    font-family: 'Lucida Grande';
+    src: url('../font/Lucida-Grande.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Lucida Grande';
+    background-color: #181a1b;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-container {
+    position: relative;
+    top: 2rem;
+    width: 49%;
+    padding-bottom: 27.56%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+}
+
+/* -------------------------
+   HEADER STYLES
+------------------------- */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 5%;
+    background-color: #1e2022;
+    font-family: 'Lucida Grande';
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo-language-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+
+/* -------------------------
+   NAV BAR
+------------------------- */
+.nav-bar {
+    display: flex;
+
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    background-color: #013199;
+    color: white;
+}
+
+/* Mobile Menu Button (Hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* -------------------------
+   Floating buttons
+------------------------- */
+.floating-button-container {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.floating-button-container.active .sub-floating-list {
+    display: flex;
+}
+
+.floating-button-container.active .main-floating-button {
+    display: none;
+}
+
+.sub-floating-list {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: rgba(30, 32, 34, 255);
+    border-radius: 25px;
+    padding: 5px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.sub-floating-list li {
+    margin-bottom: 5px;
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+}
+
+.sub-floating-list li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sub-floating-list li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+/* Style the main floating button */
+.main-floating-button {
+    background-color: rgba(30, 32, 34, 255);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.language-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.language-button img {
+    width: 30px;
+    height: 20px;
+}
+
+/* -------------------------
+   HOME SECTION
+------------------------- */
+.home {
+    /* background image */
+    background:
+        url("../img/denxiik.gif") center/cover no-repeat;
+
+    /* Container settings */
+    width: 95%;
+    margin: 1rem auto;
+    position: relative;
+    border-radius: 30px;
+    min-height: calc(90vh);
+    overflow: hidden;
+
+    /* Flexbox to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Stats card in the bottom-right corner */
+.home-stats-card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(30, 32, 34, 0.7);
+
+    /* Specific corner rounding */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    /* Increase padding for a larger card */
+    padding: 2rem 0.5rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.home-stats-card .stat {
+    text-align: center;
+    flex: 1;
+}
+
+.home-stats-card .stat h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* -------------------------
+   Dedication SECTION
+------------------------- */
+.dedication {
+    /* Gradient plus background image */
+    background:
+        linear-gradient(120deg, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0.5) 90%),
+        url("../img/progress_sharring.jpg") center/cover no-repeat;
+
+    /* Container settings */
+    width: 95%;
+    margin: 1rem auto;
+    position: relative;
+    border-radius: 30px;
+    min-height: calc(30vh);
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    /* Flexbox to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Main content (title + subtitle + button) */
+.dedication .content {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.dedication .content .title {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.dedication .content .subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* -------------------------
+    development-section SECTIONS
+------------------------- */
+.development-section {
+    width: 95%;
+    margin: 3rem auto;
+    position: relative;
+    border-radius: 30px;
+    min-height: calc(70vh);
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.development-section .content {
+    position: relative;
+    left: 1rem;
+    top: 2rem;
+    color: white;
+    width: 45%;
+}
+
+
+.development-section .content .title {
+    font-size: 2.5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.development-section .content .subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.development-section .content .title a,
+.development-section .content .subtitle a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.development-section .content .title a:hover,
+.development-section .content .subtitle a:hover {
+    color: lightblue;
+}
+
+.software {
+    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("../img/software-development.webp") center/cover no-repeat;
+}
+
+.self-development {
+    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("../img/self-development.jpg") center/cover no-repeat;
+
+}
+
+.sport-development {
+    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("../img/sport-development.jpg") center/cover no-repeat;
+
+}
+
+/* -------------------------
+    doTHEWORKOUT subpage
+------------------------- */
+.doTHEWORKOUT {
+    background: linear-gradient(120deg, rgba(41, 72, 255, 0.9) 0%, rgba(112, 157, 255, 0.1) 100%),
+        url("../img/easy_leon.jpg") center/cover no-repeat;
+
+}
+
+.playstore-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.playstore-button:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+}
+
+.playstore-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+/* Simple responsive fix (example for smaller screens) */
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+    .home {
+        min-height: calc(70vh);
+    }
+
+    .development-section .content .title {
+        font-size: 2rem;
+    }
+}
+
+/* Small devices (phones, 768px and down) */
+@media (max-width: 768px) {
+    .video-container {
+        width: 90%;
+        padding-bottom: 50.625%;
+        margin-bottom: 2rem;
+        margin-top: 10px;
+    }
+
+    .video-container iframe {
+        height: 100%;
+    }
+
+    /* Nav bar */
+    .nav-bar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1e2022;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        list-style: none;
+    }
+
+    .nav-bar a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover effect for mobile */
+    .nav-bar a:hover {
+        background-color: #013199;
+    }
+
+    /* Active menu state */
+    .nav-bar.active {
+        display: block;
+    }
+
+    /* Active link inside the mobile menu */
+    .nav-bar.active a.active {
+        background-color: #013199;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Mobile menu toggle button */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* -------------------------
+        HOME SECTION
+    ------------------------- */
+    .home-stats-card .stat h2 {
+        font-size: 2rem;
+    }
+
+    .home-stats-card {
+        width: 100%;
+        border-top-left-radius: 0px;
+    }
+
+
+    /* -------------------------
+        Dedication SECTION
+    ------------------------- */
+    .dedication .content .title {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .dedication .content .subtitle {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    /* -------------------------
+        development-section SECTION
+    ------------------------- */
+    .development-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .development-section .content {
+        width: 90%;
+        left: 0rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .menu-toggle {
+        font-size: 2.5rem;
+    }
+
+    .sub-floating-list li {
+        font-size: 1.5rem;
+    }
+
+    .main-floating-button {
+        font-size: 2rem;
+    }
+
+    .language-button img {
+        width: 40px;
+        height: 30px;
+    }
+
+    .home-stats-card .stat h2 {
+        font-size: 4rem;
+    }
+
+    .dedication .content .title {
+        font-size: 2.5rem;
+    }
+
+    .dedication .content .subtitle {
+        font-size: 2rem;
+    }
+
+    .nav-bar a {
+        font-size: 1.5rem;
+    }
+}
