@@ -9,23 +9,13 @@
     color: var(--white);
 }
 
-body.high-contrast .site-footer,
-body.white-text-mode .site-footer {
-    color: #FFF !important;
-}
-
 /* Styles for the upper section */
-.site-footer .asoPMR-info {
-    background-color: var(--blue);
+.site-footer .info {
+    background-color: var(--primary);
 }
 
-body.high-contrast .site-footer .asoPMR-info,
-body.white-text-mode .site-footer .asoPMR-info {
-    background-color: #000 !important;
-    border-top: 1px solid #BDF24B !important;
-}
 
-.site-footer .asoPMR-info .asoPMR-content-wrapper {
+.site-footer .info .content-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -33,38 +23,32 @@ body.white-text-mode .site-footer .asoPMR-info {
     margin-bottom: 8%;
 }
 
-.site-footer .asoPMR-info .column {
+.site-footer .info .column {
     margin: 0% 2rem;
     justify-content: center;
 }
 
-.site-footer .asoPMR-info .logo {
+.site-footer .info .logo {
     width: 20%;
 }
 
-.site-footer .asoPMR-info .logo img {
+.site-footer .info .logo img {
     width: 150px;
     height: 150px;
 }
 
-.site-footer .asoPMR-content-wrapper .contact {
+.site-footer .content-wrapper .contact {
     width: 20%;
 }
 
-.site-footer .asoPMR-content-wrapper .contact button {
+.site-footer .content-wrapper .contact button {
     padding: 3% 5%;
     border: 1px solid var(--white);
     letter-spacing: 3px;
 }
 
-body.high-contrast .site-footer .asoPMR-content-wrapper .contact button,
-body.white-text-mode .site-footer .asoPMR-content-wrapper .contact button {
-    background-color: #BDF24B !important;
-    color: #000 !important;
-    border: 1px solid #BDF24B !important;
-}
 
-.site-footer .asoPMR-content-wrapper .news {
+.site-footer .content-wrapper .news {
     width: 20%;
 }
 
@@ -73,56 +57,35 @@ body.white-text-mode .site-footer .asoPMR-content-wrapper .contact button {
     color: var(--white);
 }
 
-body.high-contrast .site-footer .column a,
-body.white-text-mode .site-footer .column a {
-    color: #FFF !important;
-}
 
 .site-footer .column a:hover {
     text-decoration: underline;
 }
 
 
-.site-footer .asoPMR-content-wrapper .more-info {
+.site-footer .content-wrapper .more-info {
     width: 20%;
 }
 
-.site-footer .asoPMR-info .asoPMR-content-wrapper .column .paragraph-normal {
+.site-footer .info .content-wrapper .column .paragraph-normal {
     color: var(--yellow);
     padding-bottom: 1.5rem;
 }
 
-body.high-contrast .site-footer .asoPMR-info .asoPMR-content-wrapper .column .paragraph-normal,
-body.white-text-mode .site-footer .asoPMR-info .asoPMR-content-wrapper .column .paragraph-normal {
-    color: #BDF24B !important;
-}
-
-.site-footer .asoPMR-info .column div h2 {
+.site-footer .info .column div h2 {
     margin-top: 3%;
 }
 
-body.high-contrast .site-footer .asoPMR-info .column div h2,
-body.white-text-mode .site-footer .asoPMR-info .column div h2 {
-    color: #FFB793 !important; /* Adjusted for better contrast on dark background */
-}
-
 .site-footer .aso-policies {
-    background-color: var(--yellow);
+    background-color: var(--secondary);
     padding: 1.5rem 0;
     text-align: center;
     width: 100%;
 }
 
-body.high-contrast .site-footer .aso-policies,
-body.white-text-mode .site-footer .aso-policies {
-    background-color: #333 !important;
-    border-top: 1px solid #BDF24B !important;
-}
-
 .site-footer .aso-policies {
     padding-top: 3%;
 }
-
 
 .site-footer .aso-policies .inscribtion-info {
     padding: 1%;
@@ -138,19 +101,19 @@ body.white-text-mode .site-footer .aso-policies {
 
 /* Very small devices (phones, 620px and down) */
 @media (max-width: 620px) {
-    .site-footer .asoPMR-info .asoPMR-content-wrapper {
+    .site-footer .info .content-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem 1rem;
         padding: 8% 3%;
     }
 
-    .site-footer .asoPMR-info .column {
+    .site-footer .info .column {
         margin: 0;
         text-align: center;
     }
 
-    .site-footer .asoPMR-info .logo {
+    .site-footer .info .logo {
         width: 100%;
         align-self: center;
         padding-right: 0;
@@ -159,20 +122,20 @@ body.white-text-mode .site-footer .aso-policies {
         align-items: center;
     }
 
-    .site-footer .asoPMR-info .logo img {
+    .site-footer .info .logo img {
         width: 70px;
         height: auto;
         padding: 0;
     }
 
-    .site-footer .asoPMR-content-wrapper .contact,
-    .site-footer .asoPMR-content-wrapper .news,
-    .site-footer .asoPMR-content-wrapper .more-info {
+    .site-footer .content-wrapper .contact,
+    .site-footer .content-wrapper .news,
+    .site-footer .content-wrapper .more-info {
         width: 100%;
         padding-left: 0;
     }
 
-    .site-footer .asoPMR-info h1 {
+    .site-footer .info h1 {
         padding-bottom: 0.5rem;
     }
 

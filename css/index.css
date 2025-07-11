@@ -26,7 +26,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: rgba(30, 32, 34, 0.7);
+    background-color: rgba(30, 32, 34, 0.5);
+    color: var(--white);
 
     /* Specific corner rounding */
     border-top-left-radius: 20px;
@@ -57,6 +58,10 @@
     /* -------------------------
         HOME SECTION
     ------------------------- */
+    .home-stats-card .stat {
+        margin-bottom: 2rem;
+    }
+
     .home-stats-card .stat h2 {
         font-size: 2rem;
     }

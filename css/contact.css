@@ -1,0 +1,204 @@
+@import url('styles.css');
+
+/* -------------------------
+    CONTACT SECTION (contact)
+------------------------- */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+    gap: 40px;
+    background-color: var(--light-gray-aso);
+}
+
+body.high-contrast .contact,
+body.white-text-mode .contact {
+    background-color: #000 !important;
+}
+
+.contact-info {
+    padding-top: 5%;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    color: var(--blue-aso);
+    text-align: center;
+}
+
+body.high-contrast .contact-info,
+body.white-text-mode .contact-info {
+    color: #FFF !important;
+}
+
+.contact-info .paragraph-bold {
+    color: var(--blue);
+    margin-bottom: 0%;
+    margin-top: 4%;
+}
+
+body.high-contrast .contact-info .paragraph-bold,
+body.white-text-mode .contact-info .paragraph-bold {
+    color: #BDF24B !important;
+}
+
+.contact-info .title {
+    letter-spacing: 0.3rem;
+}
+
+.contact-info h3 {
+    color: var(--yellow);
+    margin-bottom: 2%;
+}
+
+body.high-contrast .contact-info h3,
+body.white-text-mode .contact-info h3 {
+    color: #FFB793 !important;
+}
+
+.contact-info button {
+    background-color: var(--blue);
+    margin: 3% 0%;
+    letter-spacing: 0;
+}
+
+body.high-contrast .contact-info button,
+body.white-text-mode .contact-info button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: var(--blue);
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.high-contrast .contact-form-container,
+body.white-text-mode .contact-form-container {
+    background-color: #333 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid #BDF24B !important;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+body.high-contrast .contact-form label,
+body.white-text-mode .contact-form label {
+    color: #FFF !important;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--light-gray-aso);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+body.high-contrast .contact-form input[type="text"],
+body.high-contrast .contact-form input[type="email"],
+body.high-contrast .contact-form textarea,
+body.white-text-mode .contact-form input[type="text"],
+body.white-text-mode .contact-form input[type="email"],
+body.white-text-mode .contact-form textarea {
+    background-color: #555 !important;
+    color: #FFF !important;
+    border: 1px solid #BDF24B !important;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--blue);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(var(--blue-rgb), 0.2);
+}
+
+body.high-contrast .contact-form input[type="text"]:focus,
+body.high-contrast .contact-form input[type="email"]:focus,
+body.high-contrast .contact-form textarea:focus,
+body.white-text-mode .contact-form input[type="text"]:focus,
+body.white-text-mode .contact-form input[type="email"]:focus,
+body.white-text-mode .contact-form textarea:focus {
+    border-color: #BDF24B !important;
+    box-shadow: 0 0 0 2px rgba(189, 242, 75, 0.5) !important;
+}
+
+
+.contact-form button {
+    background-color: var(--yellow);
+    margin-top: 1rem;
+}
+
+body.high-contrast .contact-form button,
+body.white-text-mode .contact-form button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
+}
+
+.g-recaptcha-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 4% 0%;
+    display: inline-block;
+}
+
+.g-recaptcha {
+    width: 100%;
+    height: 78px;
+}
+
+/* Mediums devices (desktops, 768px and down) */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 15px;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .contact-info h4 {
+        text-align: center;
+    }
+
+    .contact-info p,
+    .contact-info h3 {
+        text-align: center;
+    }
+
+    .contact-info .button-mail {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

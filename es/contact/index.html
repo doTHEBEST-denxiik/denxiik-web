@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Contacto</title>
+    <meta name="description" content="Contacto">
+
+    <meta property="og:url" content="https://www.igcu-castellon-vinaros-torreblanca.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Iglesia">
+    <meta property="og:description" content="Contacto">
+    <meta property="og:image"
+        content="https://www.igcu-castellon-vinaros-torreblanca.com/img/all-together-outside.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="igcu-castellon-vinaros-torreblanca.com">
+    <meta property="twitter:url" content="https://www.igcu-castellon-vinaros-torreblanca.com/">
+    <meta name="twitter:title" content="Iglesia">
+    <meta name="twitter:description" content="Contacto">
+    <meta name="twitter:image"
+        content="https://www.igcu-castellon-vinaros-torreblanca.com/img/all-together-outside.webp">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/asoPMR-logo-rounded.webp">
+
+    <link rel="stylesheet" href="../../css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="../../script/script.js"></script>
+    <script src="../../script/contactForm.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/contact.html" />
+    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/contact.html" />
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCLS8DS737"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-PCLS8DS737');
+</script>
+
+<header id="header-placeholder"></header>
+
+<body>
+    <section class="contact">
+        <div class="contact-info">
+            <p class="paragraph-bold title">Contáctanos.</p>
+            <h3>¡Nos alegra verte aquí!</h3>
+
+            <div class="address">
+                <p class="paragraph-bold">Direcciones:</p>
+                <p class="paragraph-normal">Plaça de Sant Valent, 18, 12500 Vinaròs</p>
+                <p class="paragraph-normal">Plaza de la Iglesia, 12596 Torreblanca</p>
+                <p class="paragraph-normal">Calle Alloza, 143, 12001 Castellón</p>
+            </div>
+
+            <p class="paragraph-bold">¿Tienes preguntas?</p>
+            <p class="paragraph-normal">Envíanos un correo electrónico</p>
+            <a href="mailto:asopmr@asopmr.org">
+                <button>
+                    yuriishabanov1846@gmail.com
+                </button>
+            </a>
+            <p class="paragraph-normal">¡O rellena el formulario y nos pondremos en contacto contigo pronto!</p>
+        </div>
+
+        <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Nombre:" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico:" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                </div>
+                <div class="g-recaptcha-wrapper">
+                    <div class="g-recaptcha" data-sitekey="6LcYxmcrAAAAAKF9qTDG1BoII-CZVktWYh9yrChY"></div>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+    </section>
+</body>
+
+<script>
+    // Cargar con la página
+    document.addEventListener('DOMContentLoaded', function () {
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+
+        Promise.all([headerPromise])
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navBar = document.querySelector('.nav-bar');
+                const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
+
+                if (menuToggle && navBar) {
+                    menuToggle.addEventListener('click', function () {
+                        navBar.classList.toggle('active');
+
+                        // Cerrar todos los desplegables cuando se alterna el menú principal
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    });
+                } else {
+                    console.warn("No se encontró el botón de alternancia del menú o la barra de navegación. Revisa tu estructura HTML.");
+                }
+
+                // Añadir un listener de clic a cada desplegable para la vista móvil
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    if (dropdownLink) {
+                        dropdownLink.addEventListener('click', function (event) {
+                            // Comprobar si estamos en una pantalla pequeña
+                            if (window.innerWidth <= 1080) {
+                                event.preventDefault();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                });
+
+                initializeLanguageOptions();
+                initContactForm('contactForm', 'es', 'Contacto'); 
+
+            })
+            .catch(error => {
+                console.error('No se pudo cargar uno o más fragmentos HTML:', error);
+            });
+    });
+</script>
+
+</html>
