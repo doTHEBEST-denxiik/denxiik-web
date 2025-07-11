@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{postTitle}}</title>
+    <link rel="icon" href="../../img/logo.webp">
+
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../../script/script.js"></script>
+
+    <link rel="alternate" hreflang="en" href="https://nasha-tserkva/en/blog/{{postId}}" />
+    <link rel="alternate" hreflang="es" href="https://nasha-tserkva/es/blog/{{postId}}" />
+
+    <meta property="og:url" content="https://nasha-tserkva.com/blog/{{postId}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<%= postTitle %>" />
+    <meta property="og:description" content="{{ogDescription}}" />
+    <meta property="og:image" content="{{ogImage}}" />
+    <meta property="og:image:alt" content="{{ogImageAlt}}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:domain" content="nasha-tserkva.com" />
+    <meta name="twitter:url" content="https://nasha-tserkva.com/blog/{{postId}}" />
+    <meta name="twitter:title" content="{{postTitle}}" />
+    <meta name="twitter:description" content="{{twitterDescription}}" />
+    <meta name="twitter:image" content="{{twitterImage}}" />
+    <meta name="description" content="{{metaDescription}}">
+
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCLS8DS737"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PCLS8DS737');
+</script>
+
+<header id="header-placeholder"></header>
+
+<body>
+
+    <main>
+        <section class="single-post-section">
+            <div id="singlePostContainer" class="single-post-container">
+            </div>
+            <a href="index.html" class="back-to-blog-button">Volver a todas las publicaciones</a>
+        </section>
+    </main>
+
+    <script src="../../script/blog-logic.js"></script>
+</body>
+
+<footer id="footer-placeholder"></footer>
+
+<script>
+    // Cargar con la página
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("Evento 'DOMContentLoaded' disparado en post.html o blog.html.");
+
+        // Cargar primero todos los fragmentos HTML
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+                console.log("Fragmentos HTML de encabezado y pie de página cargados exitosamente.");
+
+                // Lógica de alternancia del menú y desplegable (de tu script.js)
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navBar = document.querySelector('.nav-bar');
+                const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
+
+                if (menuToggle && navBar) {
+                    menuToggle.addEventListener('click', function () {
+                        navBar.classList.toggle('active');
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    });
+                } else {
+                    console.warn("No se encontró el botón de alternancia del menú o la barra de navegación. Revisa tu estructura HTML.");
+                }
+
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    if (dropdownLink) {
+                        dropdownLink.addEventListener('click', function (event) {
+                            if (window.innerWidth <= 1080) {
+                                event.preventDefault();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                });
+
+                
+                initializeLanguageOptions();
+                
+            })
+            .catch(error => {
+                console.error('Uno o más fragmentos HTML no se pudieron cargar:', error);
+            });
+    });
+</script>
+
+</html>
