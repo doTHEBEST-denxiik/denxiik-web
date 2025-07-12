@@ -1,27 +1,4 @@
 @import url('styles.css');
-/* Ensure 'Outfit' or 'Plus Jakarta Sans' (or your chosen font) is linked in blog.html's <head> */
-/* For example: <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet"> */
-
-/* Define the bright color palette */
-:root {
-    --light-bg: #F0F4F8; /* Very light, cool gray */
-    --mid-bg: #E3E7ED; /* Slightly darker for card backgrounds */
-    --dark-text: #2C3E50; /* Dark blue-gray for text */
-    --accent-teal: #00BCD4; /* Bright, clean teal */
-    --accent-purple: #9C27B0; /* Soft purple for secondary accent */
-    --border-light: rgba(0, 0, 0, 0.08); /* Very subtle border */
-    --shadow-light: rgba(0, 0, 0, 0.1); /* Soft shadow */
-    --video-bg: #333; /* Dark background for video contrast */
-}
-
-/* Base styles from index.css for consistency */
-body {
-    font-family: 'Outfit', sans-serif; /* Clean, modern font */
-    background-color: var(--light-bg);
-    color: var(--dark-text);
-    line-height: 1.7;
-    overflow-x: hidden;
-}
 
 a {
     color: var(--accent-purple); /* Using purple for links for a nice contrast */

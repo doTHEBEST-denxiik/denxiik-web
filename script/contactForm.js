@@ -1,7 +1,7 @@
 const CLOUD_FUNCTION_URL = 'https://us-central1-ukrainian-church-vinarso-web.cloudfunctions.net/sendEmail';
 const SENDER_EMAIL = 'msmjtsenkder@gmail.com';
-const RECIPIENT_EMAIL = 'yuriishabanov1846@gmail.com';
-const BASE_SUBJECT = 'IGCU Form';
+const RECIPIENT_EMAIL = 'borisevich16102002@gmail.com';
+const BASE_SUBJECT = 'DTB Form';
 
 function initContactForm(formId, lang = 'es', subjectPrefix = '') {
     const form = document.getElementById(formId);
