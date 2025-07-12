@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <title>Контакти</title>
+    <meta name="description" content="Контакти">
+
+    <meta property="og:url" content="https://www.denxiik.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="doTHEBEST">
+    <meta property="og:description" content="Контакти">
+    <meta property="og:image" content="https://www.denxiik.com/img/self-development.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="denxiik.com">
+    <meta property="twitter:url" content=https://www.denxiik.com/">
+    <meta name="twitter:title" content="doTHEBEST">
+    <meta name="twitter:description" content="Контакти">
+    <meta name="twitter:image" content="https://www.denxiik.com/img/self-development.jpg">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/logo.webp">
+
+    <link rel="stylesheet" href="../../css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="../../script/script.js"></script>
+    <script src="../../script/contactForm.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/contact" />
+    <link rel="alternate" hreflang="uk" href="https://denxiik.com/uk/contact" />
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCLS8DS737"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-PCLS8DS737');
+</script>
+
+<header id="header-placeholder"></header>
+
+<body>
+    <section class="contact">
+        <div class="contact-info">
+            <p class="paragraph-bold title">Зв'язатися зі мною</p>
+            <h3>Радий вас бачити тут!</h3>
+
+            <div class="address">
+                <p class="paragraph-bold">Адреса:</p>
+                <p class="paragraph-normal">Galicia 3, 1A, Torreblanca</p>
+            </div>
+
+            <p class="paragraph-bold">Маєте запитання?</p>
+            <p class="paragraph-normal">Надішліть мені електронний лист</p>
+            <a href="mailto:asopmr@asopmr.org">
+                <button>
+                    borisevich16102002@gmail.com
+                </button>
+            </a>
+            <p class="paragraph-normal">Або заповніть форму, і я незабаром зв'яжуся з вами!</p>
+        </div>
+
+        <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Ім'я:" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Електронна пошта:" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Повідомлення" required></textarea>
+                </div>
+                <div class="g-recaptcha-wrapper">
+                    <div class="g-recaptcha" data-sitekey="6LfQwoArAAAAAHREzLG3eZxl9_T8_siWGaiZ4EDv"></div>
+                </div>
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+
+    </section>
+</body>
+
+<script>
+    // Завантажити зі сторінкою
+    document.addEventListener('DOMContentLoaded', function () {
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+
+        Promise.all([headerPromise])
+            .then(() => {
+
+                initializeLanguageOptions();
+                initContactForm('contactForm', 'uk', 'Контакти');
+
+            })
+            .catch(error => {
+                console.error('Не вдалося завантажити один або кілька HTML-фрагментів:', error);
+            });
+    });
+</script>
+
+</html>

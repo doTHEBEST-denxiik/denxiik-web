@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <title>doTHEWORKOUT - Ваше Фітнес Майбутнє</title>
+    <meta name="description" content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, що просуває вас у майбутнє фітнесу. Доступно в Play Store!">
+
+    <meta property="og:url" content="https://www.denxiik.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="doTHEWORKOUT - Ваше Фітнес Майбутнє з denxiik">
+    <meta property="og:description" content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, що просуває вас у майбутнє фітнесу. Доступно в Play Store!">
+    <meta property="og:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="denxiik.com">
+    <meta property="twitter:url" content="https://www.denxiik.com/">
+    <meta name="twitter:title" content="doTHEWORKOUT - Ваше Фітнес Майбутнє">
+    <meta name="twitter:description" content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, що просуває вас у майбутнє фітнесу. Доступно в Play Store!">
+    <meta name="twitter:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/denxiik-transparent.png">
+    <link rel="stylesheet" href="../../css/doTHEWORKOUT.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <script src="../../script/script.js"></script>
+
+    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/doTHEWORKOUT" />
+    <link rel="alternate" hreflang="uk" href="https://denxiik.com/uk/doTHEWORKOUT" />
+</head>
+
+<header id="header-placeholder"></header>
+
+<body>
+
+    <section class="development-section doTHEWORKOUT">
+        <div class="background-overlay"></div>
+        <div class="content">
+            <h1 class="title">
+                doTHEWORKOUT
+            </h1>
+            <p class="tagline">
+                Змініть свою рутину. Розкрийте свій майбутній потенціал.
+            </p>
+            <h2 class="subtitle">
+                Мій безкоштовний додаток для тренувань.<br>
+                Вже доступний у Play Store.
+            </h2>
+            <a href="https://play.google.com/store/apps/details?id=com.dothebest.workout" target="_blank" class="playstore-button primary-cta">
+                <span class="button-text">Завантажити зараз</span>
+                <i class="fas fa-arrow-right button-icon"></i>
+            </a>
+        </div>
+    </section>
+
+</body>
+
+
+<footer id="footer-placeholder"></footer>
+
+
+<script>
+    // Завантажити зі сторінкою
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("Подія 'DOMContentLoaded' спрацювала в index.html.");
+
+        // Спочатку завантажити всі HTML-фрагменти
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+                console.log("HTML-фрагменти заголовка та нижнього колонтитула успішно завантажено.");
+
+                initializeLanguageOptions();
+
+            })
+            .catch(error => {
+                console.error('Один або кілька HTML-фрагментів не вдалося завантажити:', error);
+            });
+    });
+</script>
+
+</html>

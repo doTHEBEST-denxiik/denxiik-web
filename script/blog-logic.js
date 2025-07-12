@@ -20,8 +20,8 @@ async function fetchPosts() {
         currentLanguage = 'ukr';
     } else if (pathSegments.includes('es')) {
         currentLanguage = 'es';
-    } else if (pathSegments.includes('va')) { // Add Valencian language detection
-        currentLanguage = 'va';
+    } else if (pathSegments.includes('en')) { // Add Valencian language detection
+        currentLanguage = 'en';
     }
 
     try {
