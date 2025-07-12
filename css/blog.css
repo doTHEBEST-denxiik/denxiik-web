@@ -1,5 +1,15 @@
 @import url('styles.css');
 
+
+/* Base styles from index.css for consistency */
+body {
+    font-family: 'Outfit', sans-serif; /* Clean, modern font */
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
 a {
     color: var(--accent-purple); /* Using purple for links for a nice contrast */
     text-decoration: none;
