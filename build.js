@@ -3,7 +3,7 @@ const path = require('path');
 
 // --- Configuration ---
 const config = {
-    languages: ['ukr', 'es', 'va'], // Add all languages you support
+    languages: [ 'es'], // Add all languages you support
     baseUrl: 'https://igcu-castellon-vinaros-torreblanca.com',
     defaultImage: '/img/logo.webp'
 };
