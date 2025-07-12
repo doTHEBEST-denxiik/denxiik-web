@@ -138,9 +138,14 @@ button {
 }
 
 :root {
-    --primary: #87CEEB;
-    --secondary: #F5DEB3;
-    --third: #F5F5DC;
+    --primary: #00BCD4;
+    --secondary: #2C3E50;
+
+    --light-bg: #F0F4F8; /* Very light, cool gray */
+    --mid-bg: #E3E7ED; /* Slightly darker for contrast */
+    --dark-text: #2C3E50; /* Dark blue-gray for text */
+    --border-light: rgba(0, 0, 0, 0.08); /* Very subtle border */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Soft shadow */
 
     --white: #FFFFFF;
 
@@ -161,8 +166,45 @@ button {
 
 body {
     font-family: 'Borna';
-    background-color: #fff;
-    color: #333;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
+
+section {
+    padding: 100px 5%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-light); /* Clean, subtle divider */
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Very subtle grid overlay in the background */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at center, rgba(0, 188, 212, 0.03) 0%, transparent 60%);
+    z-index: 1;
+    pointer-events: none;
+    animation: pulseSubtle 15s infinite alternate;
+}
+
+@keyframes pulseSubtle {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
 }
 
 /* -------------------------

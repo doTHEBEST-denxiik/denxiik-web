@@ -23,7 +23,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../img/denxiik-transparent.png">
+    <link rel="icon" href="../../img/logo.webp">
     <link rel="stylesheet" href="../../css/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -69,10 +69,10 @@
     <!-- Software SECTION (software) -->
     <section class="development-section software">
         <div class="content">
-            <h1 class="title">
+            <h3 class="title">
                 1) De Software<br>(<a href="https://www.youtube.com/@denxiikDEV" target="_blank"
                     rel="noopener noreferrer">doTHEDEV</a>):
-            </h1>
+            </h3>
             <h4 class="subtitle">
                 - Kotlin, Python, Java, C, SQL, HTML, CSS...<br>
                 - Back End developer del proyecto Spot4Dis de Google con <a href="https://solmes.net/en/"
@@ -101,15 +101,15 @@
     <!-- Self-development SECTION (self-development) -->
     <section class="development-section self-development">
         <div class="content">
-            <h1 class="title">
+            <h3 class="title">
                 2) Personal<br>(<a href="https://www.youtube.com/@denxiik" target="_blank"
                     rel="noopener noreferrer">doTHEBEST</a>):
-            </h1>
-            <h2 class="subtitle">
+            </h3>
+            <h4 class="subtitle">
                 PROGRES & SHARING<br>
                 Desde el 2020 llevo aprendiendo sobre el tema y trabajando en mi mejor versión.<br>
                 En el 2023 decidí hacer un "PROGRES & SHARING" y empezar a compartir mis ideas con otros
-            </h2>
+            </h4>
         </div>
 
         <div class="video-container">
@@ -123,14 +123,14 @@
     <!-- Sport-development SECTION (sport-development) -->
     <section class="development-section sport-development">
         <div class="content">
-            <h1 class="title">
+            <h3 class="title">
                 3) Físico<br>(<a href="https://www.youtube.com/@denxiikWORKOUT" target="_blank"
                     rel="noopener noreferrer">doTHEWORKOUT</a>):
-            </h1>
-            <h2 class="subtitle">
+            </h3>
+            <h4 class="subtitle">
                 DEPORTE, FUERZA, RESULTADOS<br>
                 <br>Otra obsesión que tengo es el deporte:
-            </h2>
+            </h4>
         </div>
 
         <div class="video-container">
@@ -154,36 +154,6 @@
 
         Promise.all([headerPromise, footerPromise])
             .then(() => {
-                const menuToggle = document.querySelector('.menu-toggle');
-                const navBar = document.querySelector('.nav-bar');
-                const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
-
-                if (menuToggle && navBar) {
-                    menuToggle.addEventListener('click', function () {
-                        navBar.classList.toggle('active');
-
-                        // Cerrar todos los desplegables cuando se alterna el menú principal
-                        dropdowns.forEach(dropdown => {
-                            dropdown.classList.remove('active');
-                        });
-                    });
-                } else {
-                    console.warn("No se encontró el botón de alternancia del menú o la barra de navegación. Revisa tu estructura HTML.");
-                }
-
-                // Añadir un listener de clic a cada desplegable para la vista móvil
-                dropdowns.forEach(dropdown => {
-                    const dropdownLink = dropdown.querySelector('a');
-                    if (dropdownLink) {
-                        dropdownLink.addEventListener('click', function (event) {
-                            // Comprobar si estamos en una pantalla pequeña
-                            if (window.innerWidth <= 1080) {
-                                event.preventDefault();
-                                dropdown.classList.toggle('active');
-                            }
-                        });
-                    }
-                });
 
                 initializeLanguageOptions();
                 

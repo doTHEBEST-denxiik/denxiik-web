@@ -1,7 +1,9 @@
 @import url('styles.css');
+/* Google Fonts: 'Outfit' or 'Plus Jakarta Sans' would work well for this style */
+/* Example: @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap'); */
 
 /* -------------------------
-   HOME SECTION
+    HOME SECTION (No changes here from previous versions, keeping user's original)
 ------------------------- */
 .home {
     /* background image */
@@ -26,7 +28,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: rgba(30, 32, 34, 0.5);
+    background-color: rgba(30, 32, 34, 0.5); /* Keeping this dark for contrast on the home image */
     color: var(--white);
 
     /* Specific corner rounding */
@@ -71,4 +73,267 @@
         border-top-left-radius: 0px;
     }
 
+}
+
+
+.content {
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    background-color: var(--mid-bg); /* Slightly darker card background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-light); /* Soft, ambient shadow */
+    border: 1px solid rgba(0, 188, 212, 0.1); /* Subtle border with accent color */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px var(--shadow-light), 0 0 25px rgba(0, 188, 212, 0.3); /* Accent glow on hover */
+}
+
+.title {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(0, 188, 212, 0.4); /* Soft glow */
+    animation: fadeInSlideDown 1.2s ease-out;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+a {
+    color: var(--secondary); /* Using purple for links for a nice contrast */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0; /* Hidden by default */
+    height: 1px;
+    background: var(--primary); /* Teal underline */
+    transition: width 0.3s ease-out;
+}
+
+a:hover {
+    color: var(--primary); /* Links turn teal on hover */
+    text-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+a:hover::after {
+    width: 100%; /* Underline appears */
+}
+
+/* -------------------------
+    DEDICATION SECTION
+------------------------- */
+.dedication {
+    background-color: var(--light-bg);
+}
+
+.dedication .title {
+    font-size: 4rem;
+    letter-spacing: 0.5px;
+}
+
+.dedication .subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* -------------------------
+    DEVELOPMENT SECTIONS (SOFTWARE, SELF-DEVELOPMENT, SPORT-DEVELOPMENT)
+------------------------- */
+.development-section {
+    background-color: var(--light-bg);
+    flex-direction: column;
+}
+
+.development-section .content {
+    margin-bottom: 40px;
+    background-color: var(--mid-bg);
+}
+
+.development-section .title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 6px rgba(0, 188, 212, 0.3);
+}
+
+.development-section .subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: left;
+    padding: 0 20px;
+    color: var(--dark-text); /* Standard dark text */
+}
+
+.development-section .subtitle br {
+    margin-bottom: 8px;
+}
+
+.video-container {
+    position: relative;
+    width: 20%;
+    padding-bottom: 26.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    background-color: #333; /* Dark background for video contrast */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 188, 212, 0.2);
+    transform: scale(0.98); /* Slightly smaller initially */
+    opacity: 0; /* Hidden initially */
+    animation: scaleInFadeIn 1.5s ease-out forwards;
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.video-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--primary);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* -------------------------
+    ANIMATIONS (Reused from previous, keeping it simple)
+------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInSlideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleInFadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* -------------------------
+    RESPONSIVENESS (Adjusted slightly for lighter theme)
+------------------------- */
+@media (min-width: 769px) {
+    .development-section {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 100px 5%;
+    }
+
+    .development-section .content {
+        flex: 1;
+        margin-right: 60px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .development-section .video-container {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .development-section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .development-section:nth-child(even) .content {
+        margin-right: 0;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 3rem;
+    }
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    .development-section .title {
+        font-size: 2.2rem;
+    }
+    .development-section .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 5%;
+    }
+    .content {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    .dedication .title {
+        font-size: 3.5rem;
+    }
+    .dedication .subtitle {
+        font-size: 1.5rem;
+    }
+    .development-section .title {
+        font-size: 1.8rem;
+    }
+    .development-section .subtitle {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+    }
+    .video-container {
+        width: 90%;
+        padding-bottom: 50%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 0.95rem;
+    }
+    .dedication .title {
+        font-size: 2.8rem;
+    }
+    .dedication .subtitle {
+        font-size: 1.4rem;
+    }
+    .development-section .title {
+        font-size: 1.5rem;
+    }
+    .development-section .subtitle {
+        font-size: 0.85rem;
+    }
+    .content {
+        padding: 20px;
+    }
 }

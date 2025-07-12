@@ -97,4 +97,35 @@ function initializeLanguageOptions() {
             }, 2000);
         })
     });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navBar = document.querySelector('.nav-bar');
+    const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
+
+    if (menuToggle && navBar) {
+        menuToggle.addEventListener('click', function () {
+            navBar.classList.toggle('active');
+
+            // Cerrar todos los desplegables cuando se alterna el menú principal
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        });
+    } else {
+        console.warn("No se encontró el botón de alternancia del menú o la barra de navegación. Revisa tu estructura HTML.");
+    }
+
+    // Añadir un listener de clic a cada desplegable para la vista móvil
+    dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('a');
+        if (dropdownLink) {
+            dropdownLink.addEventListener('click', function (event) {
+                // Comprobar si estamos en una pantalla pequeña
+                if (window.innerWidth <= 1080) {
+                    event.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
 }
