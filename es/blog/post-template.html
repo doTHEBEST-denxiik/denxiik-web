@@ -69,35 +69,6 @@
         Promise.all([headerPromise, footerPromise])
             .then(() => {
                 console.log("Fragmentos HTML de encabezado y pie de página cargados exitosamente.");
-
-                // Lógica de alternancia del menú y desplegable (de tu script.js)
-                const menuToggle = document.querySelector('.menu-toggle');
-                const navBar = document.querySelector('.nav-bar');
-                const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
-
-                if (menuToggle && navBar) {
-                    menuToggle.addEventListener('click', function () {
-                        navBar.classList.toggle('active');
-                        dropdowns.forEach(dropdown => {
-                            dropdown.classList.remove('active');
-                        });
-                    });
-                } else {
-                    console.warn("No se encontró el botón de alternancia del menú o la barra de navegación. Revisa tu estructura HTML.");
-                }
-
-                dropdowns.forEach(dropdown => {
-                    const dropdownLink = dropdown.querySelector('a');
-                    if (dropdownLink) {
-                        dropdownLink.addEventListener('click', function (event) {
-                            if (window.innerWidth <= 1080) {
-                                event.preventDefault();
-                                dropdown.classList.toggle('active');
-                            }
-                        });
-                    }
-                });
-
                 
                 initializeLanguageOptions();
                 

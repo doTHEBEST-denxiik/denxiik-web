@@ -147,6 +147,10 @@ button {
     --border-light: rgba(0, 0, 0, 0.08); /* Very subtle border */
     --shadow-light: rgba(0, 0, 0, 0.1); /* Soft shadow */
 
+    --accent-purple: #9C27B0; /* Soft purple for secondary accent */
+    --form-field-bg: #FFFFFF; /* Pure white for input fields */
+    --paragraph-color: #556270; /* Slightly softer dark text for paragraphs */
+
     --white: #FFFFFF;
 
     --light-grey-bg: #f9f9f9;
