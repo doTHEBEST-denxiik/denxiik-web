@@ -1,0 +1,12 @@
+[
+  {
+    "id": "post1",
+    "title": "Welcome",
+    "date": "2025-07-12",
+    "content": "Welcome to the new official doTHEBEST page",
+    "description": "Welcome to the new official doTHEBEST page",
+    "images": [
+      "../../img/blog/post1/1.webp"
+    ]
+  }
+]

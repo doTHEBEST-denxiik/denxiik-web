@@ -3,8 +3,8 @@ const path = require('path');
 
 // --- Configuration ---
 const config = {
-    languages: [ 'es'], // Add all languages you support
-    baseUrl: 'https://igcu-castellon-vinaros-torreblanca.com',
+    languages: ['en', 'es', 'ukr'], // Add all languages you support
+    baseUrl: 'https://denxiik.com',
     defaultImage: '/img/logo.webp'
 };
 
