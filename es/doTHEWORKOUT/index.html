@@ -2,90 +2,85 @@
 <html lang="es">
 
 <head>
-    <!-- HTML Meta Tags -->
-    <title>doTHEWORKOUT</title>
-    <meta name="description" content="">
+    <title>doTHEWORKOUT - Tu Futuro Fitness</title>
+    <meta name="description" content="Descarga doTHEWORKOUT, la app de entrenamiento gratuita que te impulsa al futuro del fitness. ¡Disponible en Play Store!">
 
-    <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://www.denxiik.com/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="denxiik">
-    <meta property="og:description" content="doTHEBEST">
+    <meta property="og:title" content="doTHEWORKOUT - Tu Futuro Fitness con denxiik">
+    <meta property="og:description" content="Descarga doTHEWORKOUT, la app de entrenamiento gratuita que te impulsa al futuro del fitness. ¡Disponible en Play Store!">
     <meta property="og:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
 
-    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="denxiik.com">
     <meta property="twitter:url" content="https://www.denxiik.com/">
-    <meta name="twitter:title" content="denxiik">
-    <meta name="twitter:description" content="doTHEBEST">
+    <meta name="twitter:title" content="doTHEWORKOUT - Tu Futuro Fitness">
+    <meta name="twitter:description" content="Descarga doTHEWORKOUT, la app de entrenamiento gratuita que te impulsa al futuro del fitness. ¡Disponible en Play Store!">
     <meta name="twitter:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../img/denxiik-transparent.png">
-    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/doTHEWORKOUT.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 
-    <!-- Hreflang tags (for SEO) -->
-    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/" />
-    <link rel="alternate" hreflang="es" href="https://denxiik.com/es/" />
+    <script src="../../script/script.js"></script>
+
+    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/doTHEWORKOUT" />
+    <link rel="alternate" hreflang="es" href="https://denxiik.com/es/doTHEWORKOUT" />
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PS4MVTFKE"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-1PS4MVTFKE');
-</script>
-
-<header class="site-header">
-    <div class="logo-language-container">
-        <!-- Logo -->
-        <a href="#" class="logo-container">
-            <img class="logo" src="../../img/denxiik-transparent.png" alt="denxiik Logo">
-        </a>
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="https://denxiik.com" target="_blank" rel="noopener noreferrer">denxiik</a></li>
-            <li><a href="https://solmes.net/es/" target="_blank" rel="noopener noreferrer">Solmes</a></li>
-            <li><a href="https://asopmr.org/" target="_blank" rel="noopener noreferrer">AsoPMR</a></li>
-            <li><a href="https://denxiik.github.io/mil-sabores/es/index/" target="_blank"
-                    rel="noopener noreferrer">Mil Sabores</a></li>
-            <li><a href="https://sites.google.com/view/menuvintagetapas/menu" target="_blank"
-                    rel="noopener noreferrer">Vintage</a></li>
-            <li><a href="#" id="emailContact" target="_blank" rel="noopener noreferrer">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- Mobile Menu Button -->
-    <button class="menu-toggle" aria-label="Abrir menú">
-        ☰
-    </button>
-</header>
+<header id="header-placeholder"></header>
 
 <body>
 
-    <!-- doTHEWORKOUT SECTION (doTHEWORKOUT) -->
     <section class="development-section doTHEWORKOUT">
-        <div class="content">
+        <div class="background-overlay"></div> <div class="content">
             <h1 class="title">
                 doTHEWORKOUT
             </h1>
+            <p class="tagline">
+                Transforma tu rutina. Potencia tu futuro.
+            </p>
             <h2 class="subtitle">
-                Mi aplicación gratuita de entrenos<br>
-                Ya disponible en Play Store
+                Mi aplicación gratuita de entrenos.<br>
+                Ya disponible en Play Store.
             </h2>
-            <a href="https://play.google.com/store/apps/details?id=com.dothebest.workout" target="_blank" class="playstore-button">
-                <!--img src="../../img/play-store-icon.png" alt="Play Store" class="playstore-icon"-->
-                Descargar en Play Store
-            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.dothebest.workout" target="_blank" class="playstore-button primary-cta">
+                <span class="button-text">Descargar Ahora</span>
+                <i class="fas fa-arrow-right button-icon"></i> </a>
         </div>
     </section>
 
 </body>
+
+
+<footer id="footer-placeholder"></footer>
+
+
+<script>
+    // Cargar con la página
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("Evento 'DOMContentLoaded' disparado en index.html.");
+
+        // Cargar primero todos los fragmentos HTML
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+                console.log("Fragmentos HTML de encabezado y pie de página cargados exitosamente.");
+
+                initializeLanguageOptions();
+                
+            })
+            .catch(error => {
+                console.error('Uno o más fragmentos HTML no se pudieron cargar:', error);
+            });
+    });
+</script>
+
+</html>
+
+</html>

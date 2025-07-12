@@ -147,9 +147,16 @@ button {
     --border-light: rgba(0, 0, 0, 0.08); /* Very subtle border */
     --shadow-light: rgba(0, 0, 0, 0.1); /* Soft shadow */
 
+    --accent-teal: #00BCD4; /* Bright, clean teal */
     --accent-purple: #9C27B0; /* Soft purple for secondary accent */
+
     --form-field-bg: #FFFFFF; /* Pure white for input fields */
     --paragraph-color: #556270; /* Slightly softer dark text for paragraphs */
+    --form-field-bg: #FFFFFF; /* Pure white for input fields */
+    --paragraph-color: #556270; /* Slightly softer dark text for paragraphs */
+    --gradient-start: #00BCD4; /* Teal for futuristic gradients */
+    --gradient-end: #9C27B0; /* Purple for futuristic gradients */
+    --glow-color: rgba(0, 188, 212, 0.6); /* For subtle glows */
 
     --white: #FFFFFF;
 
