@@ -21,5 +21,16 @@
     "../../img/blog/post2/3.webp",
     "../../img/blog/post2/4.webp"
   ]
+},
+{
+  "id": "post3",
+  "title": "UOC - Área Trabajo final",
+  "date": "2025-07-04",
+  "content": "Ya tengo asignada la opción 1 de mi solicitud de área de TFG del Grado en Ingeniería Informática, es decir, el área de TFG de Desarrollo de aplicaciones para dispositivos móviles<br>Asimismo, para el TFG en la UOC presentare mi propia APP para android doTHEWORKOUT, mi APP de entrenos",
+  "description": "doTHEWORKOUT para TFG rn la UOC",
+  "images": [
+    "../../img/blog/post3/1.webp",
+    "../../img/blog/post3/2.webp"
+  ]
 }
 ]
