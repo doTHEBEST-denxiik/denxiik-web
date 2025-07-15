@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UOC - Сфера дипломної роботи</title>
+    <link rel="icon" href="../../img/logo.webp">
+
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../../script/script.js"></script>
+
+    <link rel="alternate" hreflang="en" href="https://nasha-tserkva/en/blog/post3.html" />
+    <link rel="alternate" hreflang="uk" href="https://nasha-tserkva/uk/blog/post3.html" />
+
+    <meta property="og:url" content="https://denxiik.com/ukr/blog/post3.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="UOC - Сфера дипломної роботи" />
+    <meta property="og:description" content="doTHEWORKOUT для дипломної роботи в UOC" />
+    <meta property="og:image" content="https://denxiik.com/img/blog/post3/1.webp" />
+    <meta property="og:image:alt" content="UOC - Сфера дипломної роботи" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:domain" content="nasha-tserkva.com" />
+    <meta name="twitter:url" content="https://denxiik.com/ukr/blog/post3.html" />
+    <meta name="twitter:title" content="UOC - Сфера дипломної роботи" />
+    <meta name="twitter:description" content="doTHEWORKOUT для дипломної роботи в UOC" />
+    <meta name="twitter:image" content="https://denxiik.com/img/blog/post3/1.webp" />
+    <meta name="description" content=""doTHEWORKOUT для дипломної роботи в UOC"">
+
+</head>
+
+<header id="header-placeholder"></header>
+
+<body>
+
+    <main>
+        <section class="single-post-section">
+            <div id="singlePostContainer" class="single-post-container">
+            </div>
+            <a href="index.html" class="back-to-blog-button">Повернутися до всіх публікацій</a>
+        </section>
+    </main>
+
+    <script src="../../script/blog-logic.js"></script>
+</body>
+
+<footer id="footer-placeholder"></footer>
+
+<script>
+    // Завантажити зі сторінкою
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("Подія 'DOMContentLoaded' спрацювала в post.html або blog.html.");
+
+        // Спочатку завантажити всі HTML-фрагменти
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+                console.log("HTML-фрагменти заголовка та нижнього колонтитула успішно завантажено.");
+
+                initializeLanguageOptions();
+
+            })
+            .catch(error => {
+                console.error('Один або кілька HTML-фрагментів не вдалося завантажити:', error);
+            });
+    });
+</script>
+
+</html>
