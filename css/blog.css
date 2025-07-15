@@ -79,7 +79,7 @@ a:hover::after {
 
 .blog-posts-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Responsive grid */
     gap: 40px; /* Increased gap for breathing room */
     justify-content: center;
 }
@@ -89,6 +89,7 @@ a:hover::after {
     border-radius: 12px; /* Slightly more rounded corners */
     box-shadow: 0 8px 25px var(--shadow-light); /* Softer, deeper shadow */
     padding: 35px; /* More padding inside posts */
+    max-width: 1200px;
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth hover */

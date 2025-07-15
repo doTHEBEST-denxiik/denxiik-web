@@ -8,5 +8,18 @@
     "images": [
       "../../img/blog/post1/1.webp"
     ]
-  }
+  },
+  {
+  "id": "post2",
+  "title": "AsoPMR Team Building",
+  "date": "2025-07-14",
+  "content": "Last Friday, the AsoPMR team took a break to enjoy a #teambuilding day that combined laughter, challenges, and camaraderie 🤝<br>We started the day with a great group breakfast, followed by a mysterious #escaperoom activity at Escape Hunt 🕵️‍♀️🔐, where we put our communication, logic, and teamwork skills to the test 🧠(and we made it out just in time...! ⏳😅)<br>Afterward, we wrapped up the experience with a meal full of anecdotes and good times, strengthening the bonds that make us a better team 🍽️ 👥<br>✨ These moments remind us that, beyond work, the most valuable asset is the human team behind each project.<br>#Teambuilding #Teamwork #AsoPMR",
+  "description": "Last Friday, the AsoPMR team took a break to enjoy a #teambuilding day",
+  "images": [
+    "../../img/blog/post2/1.webp",
+    "../../img/blog/post2/2.webp",
+    "../../img/blog/post2/3.webp",
+    "../../img/blog/post2/4.webp"
+  ]
+}
 ]
