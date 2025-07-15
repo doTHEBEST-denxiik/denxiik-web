@@ -3,7 +3,8 @@
 
 /* Base styles from index.css for consistency */
 body {
-    font-family: 'Outfit', sans-serif; /* Clean, modern font */
+    font-family: 'Outfit', sans-serif;
+    /* Clean, modern font */
     background-color: var(--light-bg);
     color: var(--dark-text);
     line-height: 1.7;
@@ -11,7 +12,8 @@ body {
 }
 
 a {
-    color: var(--accent-purple); /* Using purple for links for a nice contrast */
+    color: var(--accent-purple);
+    /* Using purple for links for a nice contrast */
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
     position: relative;
@@ -22,19 +24,23 @@ a::after {
     position: absolute;
     left: 0;
     bottom: -3px;
-    width: 0; /* Hidden by default */
+    width: 0;
+    /* Hidden by default */
     height: 1px;
-    background: var(--accent-teal); /* Teal underline */
+    background: var(--accent-teal);
+    /* Teal underline */
     transition: width 0.3s ease-out;
 }
 
 a:hover {
-    color: var(--accent-teal); /* Links turn teal on hover */
+    color: var(--accent-teal);
+    /* Links turn teal on hover */
     text-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
 }
 
 a:hover::after {
-    width: 100%; /* Underline appears */
+    width: 100%;
+    /* Underline appears */
 }
 
 
@@ -43,26 +49,36 @@ a:hover::after {
 ------------------------- */
 .blog-hero {
     text-align: center;
-    padding: 80px 20px; /* More padding for spacious feel */
-    background-color: var(--mid-bg); /* Use mid-bg for a soft header */
-    color: var(--dark-text); /* Dark text on light background */
-    box-shadow: 0 5px 15px var(--shadow-light); /* Soft shadow at the bottom */
+    padding: 80px 20px;
+    /* More padding for spacious feel */
+    background-color: var(--mid-bg);
+    /* Use mid-bg for a soft header */
+    color: var(--dark-text);
+    /* Dark text on light background */
+    box-shadow: 0 5px 15px var(--shadow-light);
+    /* Soft shadow at the bottom */
     border-bottom: 1px solid var(--border-light);
-    animation: fadeInSlideDown 1s ease-out; /* Smooth entrance */
+    animation: fadeInSlideDown 1s ease-out;
+    /* Smooth entrance */
 }
 
 .blog-hero .title {
-    font-family: 'Outfit', sans-serif; /* Consistent clean font */
-    font-size: 3.5em; /* Slightly larger for impact */
+    font-family: 'Outfit', sans-serif;
+    /* Consistent clean font */
+    font-size: 3.5em;
+    /* Slightly larger for impact */
     margin-bottom: 15px;
-    color: var(--accent-teal); /* Bright accent color */
-    text-shadow: 0 0 10px rgba(0, 188, 212, 0.3); /* Soft glow */
+    color: var(--accent-teal);
+    /* Bright accent color */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+    /* Soft glow */
     letter-spacing: 0.5px;
 }
 
 .blog-hero .paragraph-normal {
     font-size: 1.2em;
-    max-width: 700px; /* Constrain width for readability */
+    max-width: 700px;
+    /* Constrain width for readability */
     margin: 0 auto;
     color: var(--dark-text);
     line-height: 1.8;
@@ -72,66 +88,87 @@ a:hover::after {
     BLOG POSTS SECTION
 ------------------------- */
 .blog-posts-section {
-    padding: 60px 5%; /* More generous padding */
+    padding: 60px 5%;
+    /* More generous padding */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .blog-posts-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Responsive grid */
-    gap: 40px; /* Increased gap for breathing room */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    /* Responsive grid */
+    gap: 40px;
+    /* Increased gap for breathing room */
     justify-content: center;
 }
 
 .blog-post {
-    background-color: var(--mid-bg); /* Use mid-bg for consistency */
-    border-radius: 12px; /* Slightly more rounded corners */
-    box-shadow: 0 8px 25px var(--shadow-light); /* Softer, deeper shadow */
-    padding: 35px; /* More padding inside posts */
+    background-color: var(--mid-bg);
+    /* Use mid-bg for consistency */
+    border-radius: 12px;
+    /* Slightly more rounded corners */
+    box-shadow: 0 8px 25px var(--shadow-light);
+    /* Softer, deeper shadow */
+    padding: 35px;
+    /* More padding inside posts */
     max-width: 1200px;
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth hover */
-    border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle outer border */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    /* Smooth hover */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Very subtle outer border */
 }
 
 .blog-post:hover {
-    transform: translateY(-8px); /* Lifts slightly */
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15), 0 0 15px rgba(0, 188, 212, 0.2); /* Enhanced shadow with accent glow */
+    transform: translateY(-8px);
+    /* Lifts slightly */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15), 0 0 15px rgba(0, 188, 212, 0.2);
+    /* Enhanced shadow with accent glow */
 }
 
 .blog-post h2 {
-    font-family: 'Outfit', sans-serif; /* Consistent font */
-    color: var(--dark-text); /* Dark text for titles */
+    font-family: 'Outfit', sans-serif;
+    /* Consistent font */
+    color: var(--dark-text);
+    /* Dark text for titles */
     margin-bottom: 15px;
-    font-size: 2.2em; /* Slightly larger title */
-    text-decoration: none; /* No underline by default */
+    font-size: 2.2em;
+    /* Slightly larger title */
+    text-decoration: none;
+    /* No underline by default */
     transition: color 0.3s ease;
 }
 
-.blog-post h2 a { /* Styles for the link inside h2 if title is a link */
+.blog-post h2 a {
+    /* Styles for the link inside h2 if title is a link */
     color: var(--dark-text);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .blog-post h2 a:hover {
-    color: var(--accent-teal); /* Title link turns teal on hover */
+    color: var(--accent-teal);
+    /* Title link turns teal on hover */
 }
 
 
 .blog-post .post-date {
-    font-size: 0.95em; /* Slightly larger */
-    color: var(--soft-accent); /* Muted gray for date, defined in index.css */
+    font-size: 0.95em;
+    /* Slightly larger */
+    color: var(--soft-accent);
+    /* Muted gray for date, defined in index.css */
     margin-bottom: 20px;
 }
 
 .blog-post .post-content {
     text-align: left;
-    line-height: 1.7; /* Increased line height for readability */
+    line-height: 1.7;
+    /* Increased line height for readability */
     margin-bottom: 25px;
-    color: var(--dark-text); /* Dark text */
+    color: var(--dark-text);
+    /* Dark text */
 }
 
 .blog-post .post-content p {
@@ -150,7 +187,8 @@ a:hover::after {
     -webkit-mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
     margin-top: 30px;
     border-radius: 8px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Inner shadow for depth */
 }
 
 .carousel-track {
@@ -159,7 +197,8 @@ a:hover::after {
     gap: 1.5rem;
     animation: infiniteSlide 30s linear infinite;
     will-change: transform;
-    padding: 15px 0; /* More vertical padding */
+    padding: 15px 0;
+    /* More vertical padding */
 }
 
 .carousel-track:hover {
@@ -175,12 +214,14 @@ a:hover::after {
     width: clamp(200px, 30vw, 350px);
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for carousel items */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Soft shadow for carousel items */
     transition: transform 0.2s ease;
 }
 
 .carousel-item:hover {
-    transform: scale(1.05); /* Slight scale on hover */
+    transform: scale(1.05);
+    /* Slight scale on hover */
 }
 
 .carousel-item img {
@@ -191,8 +232,13 @@ a:hover::after {
 }
 
 @keyframes infiniteSlide {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* -------------------------
@@ -200,21 +246,29 @@ a:hover::after {
 ------------------------- */
 .load-more-button {
     display: block;
-    margin: 50px auto 30px auto; /* More vertical spacing */
-    padding: 14px 30px; /* Larger button */
-    background-color: var(--accent-teal); /* Accent color for button */
-    color: white; /* White text on accent background */
+    margin: 50px auto 30px auto;
+    /* More vertical spacing */
+    padding: 14px 30px;
+    /* Larger button */
+    background-color: var(--accent-teal);
+    /* Accent color for button */
+    color: white;
+    /* White text on accent background */
     border: none;
     border-radius: 8px;
-    font-size: 1.15em; /* Slightly larger font */
+    font-size: 1.15em;
+    /* Slightly larger font */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.2); /* Soft glow shadow */
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.2);
+    /* Soft glow shadow */
 }
 
 .load-more-button:hover {
-    background-color: #00A9C1; /* Slightly darker teal on hover */
-    transform: translateY(-3px); /* Lifts more */
+    background-color: #00A9C1;
+    /* Slightly darker teal on hover */
+    transform: translateY(-3px);
+    /* Lifts more */
     box-shadow: 0 6px 20px rgba(0, 188, 212, 0.3);
 }
 
@@ -230,10 +284,13 @@ a:hover::after {
     BACK TO BLOG BUTTON (for individual post pages, if applicable)
 ------------------------- */
 .back-to-blog-button {
-    margin: 2rem auto; /* Center button horizontally */
-    display: block; /* Make it a block element to center with margin:auto */
+    margin: 2rem auto;
+    /* Center button horizontally */
+    display: block;
+    /* Make it a block element to center with margin:auto */
     padding: 12px 25px;
-    background-color: var(--accent-purple); /* Purple for this button */
+    background-color: var(--accent-purple);
+    /* Purple for this button */
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -246,7 +303,8 @@ a:hover::after {
 }
 
 .back-to-blog-button:hover {
-    background-color: #8E24AA; /* Slightly darker purple */
+    background-color: #8E24AA;
+    /* Slightly darker purple */
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -257,7 +315,8 @@ a:hover::after {
 }
 
 .back-to-blog-button::before {
-    content: '\2190'; /* Left arrow character */
+    content: '\2190';
+    /* Left arrow character */
     margin-right: 8px;
 }
 
@@ -272,7 +331,8 @@ a:hover::after {
     gap: 1.5rem;
     mask: none;
     -webkit-mask: none;
-    padding: 15px 0; /* Maintain padding */
+    padding: 15px 0;
+    /* Maintain padding */
 }
 
 .post-carousel.static-images .carousel-item {
@@ -292,18 +352,39 @@ a:hover::after {
     ANIMATIONS (Reused from index.css for consistency)
 ------------------------- */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInSlideDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes scaleInFadeIn { /* Assuming this would be used for individual blog posts loading, etc. */
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+@keyframes scaleInFadeIn {
+
+    /* Assuming this would be used for individual blog posts loading, etc. */
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* -------------------------
@@ -313,12 +394,15 @@ a:hover::after {
     .blog-hero .title {
         font-size: 3em;
     }
+
     .blog-hero .paragraph-normal {
         font-size: 1.1em;
     }
+
     .blog-post h2 {
         font-size: 2em;
     }
+
     .blog-post .post-content {
         font-size: 0.95em;
     }
@@ -328,36 +412,48 @@ a:hover::after {
     .blog-hero {
         padding: 60px 15px;
     }
+
     .blog-hero .title {
         font-size: 2.5em;
     }
+
     .blog-hero .paragraph-normal {
         font-size: 1em;
     }
+
     .blog-posts-section {
         padding: 40px 10px;
     }
+
     .blog-posts-container {
-        grid-template-columns: 1fr; /* Single column on small screens */
+        grid-template-columns: 1fr;
+        /* Single column on small screens */
         gap: 30px;
     }
+
     .blog-post {
         padding: 25px;
+        max-width: 300px;
     }
+
     .blog-post h2 {
         font-size: 1.8em;
     }
+
     .carousel-track {
         gap: 1rem;
     }
+
     .carousel-item {
         height: clamp(120px, 25vw, 200px);
         width: clamp(180px, 40vw, 300px);
     }
+
     .load-more-button {
         padding: 12px 25px;
         font-size: 1em;
     }
+
     .back-to-blog-button {
         padding: 10px 20px;
         font-size: 0.95rem;
@@ -368,19 +464,24 @@ a:hover::after {
     .blog-hero .title {
         font-size: 2em;
     }
+
     .blog-hero .paragraph-normal {
         font-size: 0.9em;
     }
+
     .blog-post {
         padding: 20px;
     }
+
     .blog-post h2 {
         font-size: 1.5em;
     }
+
     .carousel-item {
         height: 100px;
         width: 150px;
     }
+
     .load-more-button {
         padding: 10px 20px;
         font-size: 0.95em;
