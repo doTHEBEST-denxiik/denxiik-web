@@ -21,5 +21,16 @@
     "../../img/blog/post2/3.webp",
     "../../img/blog/post2/4.webp"
   ]
+},
+{
+  "id": "post3",
+  "title": "UOC - Final Project Area",
+  "date": "2025-07-04",
+  "content": "I have been assigned option 1 of my Bachelor's Thesis (TFG) area request for the Degree in Computer Engineering, which is the Mobile Application Development TFG area.<br>Furthermore, for my TFG at the UOC, I will be presenting my own Android app, doTHEWORKOUT, my workout app.",
+  "description": "doTHEWORKOUT for Bachelor's Thesis at the UOC",
+  "images": [
+    "../../img/blog/post3/1.webp",
+    "../../img/blog/post3/2.webp"
+  ]
 }
 ]
