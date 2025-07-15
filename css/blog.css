@@ -241,6 +241,10 @@ a:hover::after {
     }
 }
 
+.single-post-container {
+    max-width: 90%;
+}
+
 /* -------------------------
     LOAD MORE BUTTON
 ------------------------- */
@@ -433,7 +437,6 @@ a:hover::after {
 
     .blog-post {
         padding: 25px;
-        max-width: 300px;
     }
 
     .blog-post h2 {
