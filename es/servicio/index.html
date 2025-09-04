@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Nuestros Servicios - Crea tu Web | denxiik</title>
+    <meta name="description" content="Ofrecemos servicios de creación de sitios web a medida para empresas, diseñados para impulsar tu presencia online. Explora nuestros proyectos recientes.">
+
+    <meta property="og:url" content="https://www.denxiik.com/es/services">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="denxiik - Servicios de Desarrollo Web">
+    <meta property="og:description" content="Diseño y desarrollo de sitios web a medida. Creamos experiencias digitales únicas para tu marca.">
+    <meta property="og:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="denxiik.com">
+    <meta property="twitter:url" content="https://www.denxiik.com/es/services">
+    <meta name="twitter:title" content="denxiik - Servicios de Desarrollo Web">
+    <meta name="twitter:description" content="Diseño y desarrollo de sitios web a medida. Creamos experiencias digitales únicas para tu marca.">
+    <meta name="twitter:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/denxiik-transparent.png">
+    <link rel="stylesheet" href="../../css/services.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/services" />
+    <link rel="alternate" hreflang="es" href="https://denxiik.com/es/services" />
+</head>
+
+<header id="header-placeholder"></header>
+
+<body>
+
+    <section class="services-section">
+        <div class="content">
+            <h1 class="title">
+                Creo tu presencia web
+            </h1>
+            <h2 class="subtitle">
+                Diseño y desarrollo web a medida para tu empresa.
+            </h2>
+            <p class="paragraph">
+                Transforma tu marca con un sitio web moderno y optimizado. Nos especializamos en crear experiencias digitales únicas que no solo lucen increíbles, sino que también impulsan el crecimiento de tu negocio. Desde tiendas online a sitios informativos, construimos soluciones que se adaptan perfectamente a tus necesidades.
+            </p>
+            <a href="https://www.denxiik.com/es/contact" class="primary-cta">
+                <span class="button-text">¡Empieza tu Proyecto!</span>
+                <i class="fas fa-arrow-right button-icon"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <div class="header">
+            <h2 class="title">Proyectos Recientes</h2>
+            <p class="subtitle">Explora algunos de nuestros trabajos más destacados.</p>
+        </div>
+        
+        <div class="portfolio-grid-container">
+            <a href="https://asopmr.org/es/index/" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3 class="card-title">ASOPMR</h3>
+            </a>
+
+            <a href="https://mil-sabores-heladeria.web.app/es/index/index.html" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-ice-cream"></i>
+                </div>
+                <h3 class="card-title">Mil Sabores Heladeria</h3>
+            </a>
+
+            <a href="https://solmes.net/es/" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <h3 class="card-title">Solmes</h3>
+            </a>
+
+            <a href="https://sites.google.com/view/tapasxaloc/espa%C3%B1ol/tapas" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-store-alt"></i>
+                </div>
+                <h3 class="card-title">Tapas Xaloc</h3>
+            </a>
+
+            <a href="https://sites.google.com/view/menuvintagetapas/menu" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 class="card-title">Menu Vintage Tapas</h3>
+            </a>
+
+
+            <a href="https://spot4dis.com/es/" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="card-title">Spot4dis</h3>
+            </a>
+
+            <a href="https://www.denxiik.com/es/index/" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="card-title">denxiik</h3>
+            </a>
+        </div>
+    </section>
+
+</body>
+
+
+<footer id="footer-placeholder"></footer>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("Evento 'DOMContentLoaded' disparado en services.html.");
+        
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+                console.log("Fragmentos HTML de encabezado y pie de página cargados exitosamente.");
+                if (typeof initializeLanguageOptions === 'function') {
+                    initializeLanguageOptions();
+                } else {
+                    console.warn("initializeLanguageOptions function not found. Language switching might not work.");
+                }
+            })
+            .catch(error => {
+                console.error('Uno o más fragmentos HTML no se pudieron cargar:', error);
+            });
+    });
+
+    function loadHTML(url, elementId) {
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById(elementId).innerHTML = html;
+            });
+    }
+</script>
+
+
+</html>
