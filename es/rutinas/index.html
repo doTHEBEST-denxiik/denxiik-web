@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>denxiik</title>
+    <meta name="description" content="Rutinas semanales gratuitas">
+
+    <meta property="og:url" content="https://www.denxiik.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="denxiik">
+    <meta property="og:description" content="Rutinas semanales gratuitas">
+    <meta property="og:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="denxiik.com">
+    <meta property="twitter:url" content="https://www.denxiik.com/">
+    <meta name="twitter:title" content="denxiik">
+    <meta name="twitter:description" content="Rutinas semanales gratuitas">
+    <meta name="twitter:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/logo.webp">
+    <link rel="stylesheet" href="../../css/routines.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="../../script/script.js"></script>
+
+    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/" />
+    <link rel="alternate" hreflang="es" href="https://denxiik.com/es/" />
+</head>
+
+<header id="header-placeholder"></header>
+
+<body>
+
+    <main class="routines-main">
+        <section class="routines-section">
+            <div class="header">
+                <h1 class="title">Rutians semanales</h1>
+                <p class="subtitle">Elige y empieza a entrenar</p>
+            </div>
+
+            <div class="routine-group" id="lion-group">
+                <h2 class="group-title">Leon</h2>
+                
+                <div class="group-links-grid">
+                    <a href="easy-leon.html" class="routine-link-card">
+                        <i class="fas fa-running routine-link-icon"></i>
+                        <h3 class="routine-link-title">Easy Leon 🦁</h3>
+                    </a>
+
+                    <a href="medium-leon.html" class="routine-link-card">
+                        <i class="fas fa-dumbbell routine-link-icon"></i>
+                        <h3 class="routine-link-title">Medium Leon 🦁</h3>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<footer id="footer-placeholder"></footer>
+
+<script>
+    // Load with the page
+    document.addEventListener('DOMContentLoaded', function () {
+        // First, load all HTML fragments
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+
+                initializeLanguageOptions();
+
+            })
+            .catch(error => {
+                console.error('One or more HTML fragments could not be loaded:', error);
+            });
+    });
+</script>
+
+</html>
