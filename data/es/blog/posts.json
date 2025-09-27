@@ -1,36 +1,44 @@
 [
-{
-  "id": "post1",
-  "title": "Bienvenido",
-  "date": "2025-07-12",
-  "content": "Bienvenido a la nueva pagina official de doTHEBEST",
-  "description": "Bienvenido a la nueva pagina official de doTHEBEST",
-  "images": [
-    "../../img/blog/post1/1.webp"
-  ]
-},
-{
-  "id": "post2",
-  "title": "Team Building de AsoPMR",
-  "date": "2025-07-14",
-  "content": "El viernes pasado, el equipo de AsoPMR nos tomamos una pausa para disfrutar de una jornada de #teambuilding que combinó risas, retos y compañerismo 🤝<br>Empezamos el día con un buen desayuno grupal, seguido de una actividad de #escaperoom de misterio en Escape Hunt 🕵️‍♀️🔐, donde pusimos a prueba nuestras habilidades de comunicación, lógica y trabajo en equipo 🧠(¡y salimos a tiempo, por muy poco...! ⏳😅)<br>Después, cerramos la experiencia con una comida llena de anécdotas y buenos momentos, reforzando los lazos que nos hacen un mejor equipo 🍽️ 👥<br>✨ Estos momentos nos recuerdan que, más allá del trabajo, lo más valioso es el equipo humano que hay detrás de cada proyecto.<br>#Teambuilding #TrabajoEnEquipo #AsoPMR",
-  "description": "El viernes pasado, el equipo de AsoPMR nos tomamos una pausa para disfrutar de una jornada de #teambuilding",
-  "images": [
-    "../../img/blog/post2/1.webp",
-    "../../img/blog/post2/2.webp",
-    "../../img/blog/post2/3.webp",
-    "../../img/blog/post2/4.webp"
-  ]
-},
-{
-  "id": "post3",
-  "title": "UOC - Área Trabajo final",
-  "date": "2025-07-04",
-  "content": "Ya tengo asignada la opción 1 de mi solicitud de área de TFG del Grado en Ingeniería Informática, es decir, el área de TFG de Desarrollo de aplicaciones para dispositivos móviles<br>Asimismo, para el TFG en la UOC presentare mi propia APP para android doTHEWORKOUT, mi APP de entrenos",
-  "description": "doTHEWORKOUT para TFG rn la UOC",
-  "images": [
-    "../../img/blog/post3/1.webp",
-    "../../img/blog/post3/2.webp"
-  ]
-}
+  {
+    "id": "post1",
+    "title": "Bienvenido",
+    "date": "2025-07-12",
+    "content": "Bienvenido a la nueva pagina official de doTHEBEST",
+    "description": "Bienvenido a la nueva pagina official de doTHEBEST",
+    "images": [
+      "../../img/blog/post1/1.webp"
+    ]
+  },
+  {
+    "id": "post2",
+    "title": "Team Building de AsoPMR",
+    "date": "2025-07-14",
+    "content": "El viernes pasado, el equipo de AsoPMR nos tomamos una pausa para disfrutar de una jornada de #teambuilding que combinó risas, retos y compañerismo 🤝<br>Empezamos el día con un buen desayuno grupal, seguido de una actividad de #escaperoom de misterio en Escape Hunt 🕵️‍♀️🔐, donde pusimos a prueba nuestras habilidades de comunicación, lógica y trabajo en equipo 🧠(¡y salimos a tiempo, por muy poco...! ⏳😅)<br>Después, cerramos la experiencia con una comida llena de anécdotas y buenos momentos, reforzando los lazos que nos hacen un mejor equipo 🍽️ 👥<br>✨ Estos momentos nos recuerdan que, más allá del trabajo, lo más valioso es el equipo humano que hay detrás de cada proyecto.<br>#Teambuilding #TrabajoEnEquipo #AsoPMR",
+    "description": "El viernes pasado, el equipo de AsoPMR nos tomamos una pausa para disfrutar de una jornada de #teambuilding",
+    "images": [
+      "../../img/blog/post2/1.webp",
+      "../../img/blog/post2/2.webp",
+      "../../img/blog/post2/3.webp",
+      "../../img/blog/post2/4.webp"
+    ]
+  },
+  {
+    "id": "post3",
+    "title": "UOC - Área Trabajo final",
+    "date": "2025-07-04",
+    "content": "Ya tengo asignada la opción 1 de mi solicitud de área de TFG del Grado en Ingeniería Informática, es decir, el área de TFG de Desarrollo de aplicaciones para dispositivos móviles<br>Asimismo, para el TFG en la UOC presentare mi propia APP para android doTHEWORKOUT, mi APP de entrenos",
+    "description": "doTHEWORKOUT para TFG en la UOC",
+    "images": [
+      "../../img/blog/post3/1.webp",
+      "../../img/blog/post3/2.webp"
+    ]
+  },
+  {
+    "id": "post4",
+    "title": "UOC - Trabajo final de Grado",
+    "date": "2025-09-27",
+    "content": "¡Noticias emocionantes! 🎉 Mi proyecto de app doTHEWORKOUT ha sido aprobado como mi Trabajo de Final de Grado (TFG) en la UOC (Grado de Ingeniería Informática).<br><br>En este video, te cuento todos los detalles sobre cómo esta aplicación, que ya está publicada en Play Store (aunque muy básica), se convierte en el pilar de mi último proyecto universitario. Estoy en el punto de partida y comparto mi planificación inicial para el semestre.<br><br>Si te interesa ver el detrás de cámaras de un TFG real, desde cero, y cómo se transforma un hobby en un proyecto académico, ¡dale al play!",
+    "description": "doTHEWORKOUT - TFG en la UOC",
+    "videoID": "9rGAgDGBfCk"
+  }
 ]
