@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>denxiik - Retos</title>
+    <meta name="description" content="Desafíos de entrenamiento de doTHE7 y retos de 4 semanas.">
+
+    <meta property="og:url" content="https://www.denxiik.com/challenges.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="denxiik - Retos">
+    <meta property="og:image" content="https://www.denxiik.com/img/challenge-cover.png">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.webp">
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/challenges.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="../../script/script.js"></script>
+</head>
+
+<header id="header-placeholder"></header>
+
+<body>
+
+    <main class="challenges-main">
+        <section class="challenges-section">
+            <div class="header">
+                <h1 class="title">Retos</h1>
+                <p class="subtitle">Supera tus límites con nuestra selección de desafíos. ¿Estás listo?</p>
+            </div>
+            
+            <div class="challenge-group">
+                <h2 class="group-title">doTHE7</h2>
+                <div class="videos-grid">
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-name">Backflip</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/JzesrXLZswI" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-name">Frontflip</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/I8oPlkog9V0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-name">20 dominadas y<br>Parada de manos</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/SZDhTa69gEg" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-name">50 flexiones</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/K8TfB6qWyuE" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            ---
+            
+            <div class="challenge-group four-weeks-group">
+                <h2 class="group-title">Reto 4 Semanas de Abdomen</h2>
+                <div class="videos-grid">
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-name">Semana 1</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Xhb03H6KU4c" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-name">Semana 2</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/o9rInr5S9jo" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-name">Semana 3</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/yIYXLFp3YFM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3 class="challenge-name">Semana 4</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/odYtPp2VVvA" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            ---
+
+            <div class="challenge-group">
+                <h2 class="group-title">Vertical Pushup Challenge Shorts</h2>
+                <div class="playlist-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/videoseries?list=PLvY15VwKCA5AHFSX7gX88siMWFDYolY0p" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="playlist-description">Una serie de shorts que te guiarán paso a paso hacia la vertical pushup. ¡Mira la lista completa!</p>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+                initializeLanguageOptions();
+            })
+            .catch(error => {
+                console.error('One or more HTML fragments could not be loaded:', error);
+            });
+    });
+</script>
+</html>
