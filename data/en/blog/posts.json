@@ -10,27 +10,35 @@
     ]
   },
   {
-  "id": "post2",
-  "title": "AsoPMR Team Building",
-  "date": "2025-07-14",
-  "content": "Last Friday, the AsoPMR team took a break to enjoy a #teambuilding day that combined laughter, challenges, and camaraderie 🤝<br>We started the day with a great group breakfast, followed by a mysterious #escaperoom activity at Escape Hunt 🕵️‍♀️🔐, where we put our communication, logic, and teamwork skills to the test 🧠(and we made it out just in time...! ⏳😅)<br>Afterward, we wrapped up the experience with a meal full of anecdotes and good times, strengthening the bonds that make us a better team 🍽️ 👥<br>✨ These moments remind us that, beyond work, the most valuable asset is the human team behind each project.<br>#Teambuilding #Teamwork #AsoPMR",
-  "description": "Last Friday, the AsoPMR team took a break to enjoy a #teambuilding day",
-  "images": [
-    "../../img/blog/post2/1.webp",
-    "../../img/blog/post2/2.webp",
-    "../../img/blog/post2/3.webp",
-    "../../img/blog/post2/4.webp"
-  ]
-},
-{
-  "id": "post3",
-  "title": "UOC - Final Project Area",
-  "date": "2025-07-04",
-  "content": "I have been assigned option 1 of my Bachelor's Thesis (TFG) area request for the Degree in Computer Engineering, which is the Mobile Application Development TFG area.<br>Furthermore, for my TFG at the UOC, I will be presenting my own Android app, doTHEWORKOUT, my workout app.",
-  "description": "doTHEWORKOUT for Bachelor's Thesis at the UOC",
-  "images": [
-    "../../img/blog/post3/1.webp",
-    "../../img/blog/post3/2.webp"
-  ]
-}
+    "id": "post2",
+    "title": "AsoPMR Team Building",
+    "date": "2025-07-14",
+    "content": "Last Friday, the AsoPMR team took a break to enjoy a #teambuilding day that combined laughter, challenges, and camaraderie 🤝<br>We started the day with a great group breakfast, followed by a mysterious #escaperoom activity at Escape Hunt 🕵️‍♀️🔐, where we put our communication, logic, and teamwork skills to the test 🧠(and we made it out just in time...! ⏳😅)<br>Afterward, we wrapped up the experience with a meal full of anecdotes and good times, strengthening the bonds that make us a better team 🍽️ 👥<br>✨ These moments remind us that, beyond work, the most valuable asset is the human team behind each project.<br>#Teambuilding #Teamwork #AsoPMR",
+    "description": "Last Friday, the AsoPMR team took a break to enjoy a #teambuilding day",
+    "images": [
+      "../../img/blog/post2/1.webp",
+      "../../img/blog/post2/2.webp",
+      "../../img/blog/post2/3.webp",
+      "../../img/blog/post2/4.webp"
+    ]
+  },
+  {
+    "id": "post3",
+    "title": "UOC - Final Project Area",
+    "date": "2025-07-04",
+    "content": "I have been assigned option 1 of my Bachelor's Thesis (TFG) area request for the Degree in Computer Engineering, which is the Mobile Application Development TFG area.<br>Furthermore, for my TFG at the UOC, I will be presenting my own Android app, doTHEWORKOUT, my workout app.",
+    "description": "doTHEWORKOUT for Bachelor's Thesis at the UOC",
+    "images": [
+      "../../img/blog/post3/1.webp",
+      "../../img/blog/post3/2.webp"
+    ]
+  },
+  {
+    "id": "post4",
+    "title": "UOC - Final Degree Project",
+    "date": "2025-09-27",
+    "content": "Exciting news! 🎉 My doTHEWORKOUT app project has been approved as my Final Degree Project (TFG) at UOC (Bachelor's Degree in Computer Engineering).<br><br>In this video, I tell you all the details about how this app, which is already published on the Play Store (though very basic), becomes the pillar of my final university project. I'm at the starting point and share my initial planning for the semester.<br><br>If you're interested in seeing the behind-the-scenes of a real TFG, starting from scratch, and how a hobby is transformed into an academic project, hit play!",
+    "description": "doTHEWORKOUT - Final Degree Project at UOC",
+    "videoID": "9rGAgDGBfCk"
+  }
 ]

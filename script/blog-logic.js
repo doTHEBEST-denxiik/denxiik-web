@@ -5,33 +5,37 @@ const loadMoreButton = document.getElementById('loadMorePosts');
 let allPosts = [];
 let postsPerPage = 5;
 let currentIndex = 0;
-let currentLanguage = 'ukr'; // Default to Ukrainian
+let currentLanguage = 'en'; 
 
-// UPDATED: A more robust way to check if we are on a single post page.
-// It checks if the path is an HTML file but not the main 'index.html'.
+// Detecta si la página actual es la vista de un solo post (ej: post4.html)
 const isSinglePostPage = window.location.pathname.endsWith('.html') && !window.location.pathname.endsWith('/index.html');
 
 
+// --------------------------------------------------
+// 1. Fetching and Initialization
+// --------------------------------------------------
+
 async function fetchPosts() {
-    // Determine the current language from the URL path
-    // Example: /ukr/blog/index.html or /es/blog/index.html or /va/blog/index.html
+    // Determina el idioma actual basado en la ruta URL
     const pathSegments = window.location.pathname.split('/');
     if (pathSegments.includes('ukr')) {
         currentLanguage = 'ukr';
     } else if (pathSegments.includes('es')) {
         currentLanguage = 'es';
-    } else if (pathSegments.includes('en')) { // Add Valencian language detection
+    } else if (pathSegments.includes('va')) { 
+        currentLanguage = 'va';
+    } else if (pathSegments.includes('en')) {
         currentLanguage = 'en';
     }
 
     try {
-        // UPDATED: Fetch posts from the language-specific data folder
+        // Carga el JSON específico del idioma
         const response = await fetch(`../../data/${currentLanguage}/blog/posts.json`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         allPosts = await response.json();
-        allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+        allPosts.sort((a, b) => new Date(b.date) - new Date(a.date)); // Ordena por fecha descendente
 
         if (isSinglePostPage) {
             displaySinglePost();
@@ -41,14 +45,9 @@ async function fetchPosts() {
 
     } catch (error) {
         console.error("Error fetching blog posts:", error);
-        let errorMessage = '';
-        if (currentLanguage === 'ukr') {
-            errorMessage = 'Не вдалося завантажити дописи. Спробуйте пізніше.';
-        } else if (currentLanguage === 'es') {
-            errorMessage = 'No se pudieron cargar las publicaciones. Inténtelo de nuevo más tarde.';
-        } else if (currentLanguage === 'va') { // Add Valencian translation for error message
-            errorMessage = 'No s\'han pogut carregar les publicacions. Torneu-ho a intentar més tard.';
-        }
+        
+        // Manejo de errores localizado
+        const errorMessage = getLocalizedText('fetchError');
 
         if (blogPostsContainer) {
             blogPostsContainer.innerHTML = `<p>${errorMessage}</p>`;
@@ -58,6 +57,38 @@ async function fetchPosts() {
         }
     }
 }
+
+
+// --------------------------------------------------
+// 2. Helper Functions (Localization)
+// --------------------------------------------------
+
+function getLocale() {
+    if (currentLanguage === 'ukr') {
+        return 'uk-UA';
+    } else if (currentLanguage === 'es') {
+        return 'es-ES';
+    } else if (currentLanguage === 'va') { 
+        return 'ca-ES-valencia'; 
+    }
+    return 'en-US';
+}
+
+function getLocalizedText(key) {
+    const translations = {
+        readMore: { ukr: 'Читати далі', es: 'Leer más', va: 'Llegir més', en: 'Read more' },
+        loadMore: { ukr: 'Завантажити ще', es: 'Cargar más', va: 'Carregar més', en: 'Load more' },
+        notFound: { ukr: 'Допис не знайдено.', es: 'Publicación no encontrada.', va: 'Publicació no trobada.', en: 'Post not found.' },
+        fetchError: { ukr: 'Не вдалося завантажити дописи. Спробуйте пізніше.', es: 'No se pudieron cargar las publicaciones. Inténtelo de nuevo más tarde.', va: 'No s\'han pogut carregar les publicacions. Torneu-ho a intentar més tard.', en: 'Error loading posts. Please try again later.' }
+    };
+    // Devuelve la traducción si existe, si no, usa la versión en inglés
+    return translations[key][currentLanguage] || translations[key]['en']; 
+}
+
+
+// --------------------------------------------------
+// 3. Post List View Rendering (with video embed preview)
+// --------------------------------------------------
 
 function displayPostsList() {
     if (!blogPostsContainer) return;
@@ -69,30 +100,11 @@ function displayPostsList() {
         const postElement = document.createElement('article');
         postElement.classList.add('blog-post');
 
-        // UPDATED: Localize date string based on currentLanguage
         const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-        let locale;
-        if (currentLanguage === 'ukr') {
-            locale = 'uk-UA';
-        } else if (currentLanguage === 'es') {
-            locale = 'es-ES';
-        } else if (currentLanguage === 'va') { // Add Valencian locale
-            locale = 'ca-ES-valencia'; // Or 'ca-ES' if 'ca-ES-valencia' is not supported by all browsers
-        }
-        const localizedDate = new Date(post.date).toLocaleDateString(locale, dateOptions);
-
-        // UPDATED: Ensure the read more button text is localized
-        let readMoreText;
-        if (currentLanguage === 'ukr') {
-            readMoreText = 'Читати далі';
-        } else if (currentLanguage === 'es') {
-            readMoreText = 'Leer más';
-        } else if (currentLanguage === 'va') { // Add Valencian translation for read more button
-            readMoreText = 'Llegir més';
-        }
-
-
-        // UPDATED: The link is now relative to index.html within the /blog/ directory, and we need to include the language prefix
+        const localizedDate = new Date(post.date).toLocaleDateString(getLocale(), dateOptions);
+        const readMoreText = getLocalizedText('readMore');
+        
+        // Estructura base del post
         postElement.innerHTML = `
             <h2>${post.title}</h2>
             <p class="post-date">${localizedDate}</p>
@@ -108,53 +120,78 @@ function displayPostsList() {
         const carouselTrack = postElement.querySelector(`#carouselTrackList-${post.id}`);
         const carouselContainer = carouselTrack.parentElement;
 
-        if (post.images && post.images.length > 0) {
-            carouselContainer.classList.toggle('static-images', post.images.length <= 2);
-            const imagesToDisplay = post.images.length > 2 ? [...post.images, ...post.images] : post.images;
+        
+        // --- LÓGICA DE CONTENIDO DEL CARRUSEL (IMAGEN O VIDEO IFRAME) ---
+        
+        let contentToDisplay = [];
+        let isVideoEmbed = false;
 
-            imagesToDisplay.forEach(imageSrc => {
+        if (post.images && post.images.length > 0) {
+            // Caso 1: Tiene imágenes (comportamiento normal de carrusel)
+            contentToDisplay = post.images.length > 2 ? [...post.images, ...post.images] : post.images;
+        } else if (post.videoID) {
+            // Caso 2: No tiene imágenes, pero tiene video. Insertamos el iframe.
+            const videoEmbedHtml = `
+                <div class="preview-video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/${post.videoID}?rel=0&amp;showinfo=0" 
+                        frameborder="0" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            `;
+            contentToDisplay = [videoEmbedHtml];
+            isVideoEmbed = true;
+        }
+        
+        if (contentToDisplay.length > 0) {
+            // Para el vídeo, forzamos vista estática ya que solo es un elemento
+            carouselContainer.classList.toggle('static-images', isVideoEmbed || contentToDisplay.length <= 2);
+            
+            contentToDisplay.forEach(item => {
                 const carouselItem = document.createElement('div');
                 carouselItem.classList.add('carousel-item');
-                carouselItem.innerHTML = `<img src="${imageSrc}" alt="${post.title} image">`;
+                
+                if (isVideoEmbed) {
+                    // Insertamos el iframe HTML directamente
+                    carouselItem.innerHTML = item; 
+                    carouselItem.classList.add('carousel-item-video'); 
+                } else {
+                    // Insertamos la imagen <img>
+                    carouselItem.innerHTML = `<img src="${item}" alt="${post.title} preview">`;
+                }
+
                 carouselTrack.appendChild(carouselItem);
             });
         } else {
             carouselContainer.style.display = 'none';
         }
+        // ---------------------------------------------------
+
     });
 
     blogPostsContainer.appendChild(fragment);
     currentIndex += postsToLoad.length;
 
     if (loadMoreButton) {
-        // UPDATED: Localize load more button text
-        let loadMoreButtonText;
-        if (currentLanguage === 'ukr') {
-            loadMoreButtonText = 'Завантажити ще';
-        } else if (currentLanguage === 'es') {
-            loadMoreButtonText = 'Cargar más';
-        } else if (currentLanguage === 'va') { // Add Valencian translation for load more button
-            loadMoreButtonText = 'Carregar més';
-        }
+        const loadMoreButtonText = getLocalizedText('loadMore');
         loadMoreButton.textContent = loadMoreButtonText;
         loadMoreButton.style.display = currentIndex >= allPosts.length ? 'none' : 'block';
     }
 }
+
+
+// --------------------------------------------------
+// 4. Single Post View Rendering (with static video embed)
+// --------------------------------------------------
 
 function displaySinglePost() {
     if (!singlePostContainer) return;
 
     const pathParts = window.location.pathname.split('/');
     const postId = pathParts.pop().replace('.html', '');
-
-    let notFoundMessage = '';
-    if (currentLanguage === 'ukr') {
-        notFoundMessage = 'Допис не знайдено.';
-    } else if (currentLanguage === 'es') {
-        notFoundMessage = 'Publicación no encontrada.';
-    } else if (currentLanguage === 'va') { // Add Valencian translation for not found message
-        notFoundMessage = 'Publicació no trobada.';
-    }
+    const notFoundMessage = getLocalizedText('notFound');
 
     if (!postId) {
         singlePostContainer.innerHTML = `<p>${notFoundMessage}</p>`;
@@ -168,26 +205,33 @@ function displaySinglePost() {
         return;
     }
 
-    // UPDATED: Localize date string based on currentLanguage
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-    let locale;
-    if (currentLanguage === 'ukr') {
-        locale = 'uk-UA';
-    } else if (currentLanguage === 'es') {
-        locale = 'es-ES';
-    } else if (currentLanguage === 'va') { // Add Valencian locale
-        locale = 'ca-ES-valencia'; // Or 'ca-ES' if 'ca-ES-valencia' is not supported by all browsers
-    }
-    const localizedDate = new Date(post.date).toLocaleDateString(locale, dateOptions);
+    const localizedDate = new Date(post.date).toLocaleDateString(getLocale(), dateOptions);
 
-    // The content is displayed dynamically, while the meta tags are pre-rendered.
+    // --- LÓGICA DE VIDEO EMBED (Single Post) ---
+    let videoHtml = '';
+    if (post.videoID) {
+        videoHtml = `
+            <div class="blog-video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/${post.videoID}" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        `;
+    }
+    // --------------------------------------------
+
     const postElement = document.createElement('article');
     postElement.classList.add('blog-post', 'single-view');
     postElement.innerHTML = `
         <h2>${post.title}</h2>
         <p class="post-date">${localizedDate}</p>
         <div class="post-content">${post.content}</div>
-        <div class="post-carousel">
+        
+        ${videoHtml}  <div class="post-carousel">
             <div class="carousel-track" id="carouselTrackSingle-${post.id}">
             </div>
         </div>
@@ -204,8 +248,6 @@ function displaySinglePost() {
         imagesToDisplay.forEach(imageSrc => {
             const carouselItem = document.createElement('div');
             carouselItem.classList.add('carousel-item');
-            // The image paths from posts.json (e.g., ../../img/...) are correct
-            // relative to the new post location (/blog/post1.html), so no change is needed.
             carouselItem.innerHTML = `<img src="${imageSrc}" alt="${post.title} image">`;
             carouselTrack.appendChild(carouselItem);
         });
@@ -214,8 +256,13 @@ function displaySinglePost() {
     }
 }
 
+// --------------------------------------------------
+// 5. Event Listeners and Execution
+// --------------------------------------------------
+
 if (loadMoreButton) {
     loadMoreButton.addEventListener('click', displayPostsList);
 }
 
+// Inicia la carga de posts al inicio
 fetchPosts();
