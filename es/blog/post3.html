@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="../../script/script.js"></script>
 
-    <link rel="alternate" hreflang="en" href="https://nasha-tserkva/en/blog/post3.html" />
-    <link rel="alternate" hreflang="es" href="https://nasha-tserkva/es/blog/post3.html" />
+    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/blog/post3.html" />
+    <link rel="alternate" hreflang="es" href="https://denxiik.com/es/blog/post3.html" />
+    <link rel="alternate" hreflang="uk" href="https://denxiik.com/ukr/blog/post3.html" />
 
-    <meta property="og:url" content="https://denxiik.com/es/blog/post3.html" />
+    <meta property="og:url" content="https://denxiik.com/blog/post3.html" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="UOC - Área Trabajo final" />
     <meta property="og:description" content="doTHEWORKOUT para TFG en la UOC" />
@@ -22,17 +23,24 @@
     <meta property="og:image:alt" content="UOC - Área Trabajo final" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:domain" content="nasha-tserkva.com" />
-    <meta name="twitter:url" content="https://denxiik.com/es/blog/post3.html" />
+    <meta name="twitter:domain" content="denxiik.com" />
+    <meta name="twitter:url" content="https://denxiik.com/blog/post3.html" />
     <meta name="twitter:title" content="UOC - Área Trabajo final" />
     <meta name="twitter:description" content="doTHEWORKOUT para TFG en la UOC" />
     <meta name="twitter:image" content="https://denxiik.com/img/blog/post3/1.webp" />
     <meta name="description" content=""doTHEWORKOUT para TFG en la UOC"">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCLS8DS737"></script>
-    <script src="../../script/gtag-config.js"></script>
-
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W58Y0ZH93S"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-W58Y0ZH93S');
+</script>
 
 <header id="header-placeholder"></header>
 
@@ -63,9 +71,9 @@
         Promise.all([headerPromise, footerPromise])
             .then(() => {
                 console.log("Fragmentos HTML de encabezado y pie de página cargados exitosamente.");
-                
+
                 initializeLanguageOptions();
-                
+
             })
             .catch(error => {
                 console.error('Uno o más fragmentos HTML no se pudieron cargar:', error);
