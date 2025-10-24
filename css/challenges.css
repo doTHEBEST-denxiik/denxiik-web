@@ -40,7 +40,6 @@
     margin-bottom: 40px;
 }
 
-/* CORRECTED: Reverting to a sensible min-width for the grid to allow multiple columns */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -113,8 +112,9 @@
     position: relative;
     width: 100%;
     /* 9:16 aspect ratio for Shorts: 16 / 9 * 100% = 177.77% */
-    padding-top: 177.77%; 
+    padding-top: 57.77%; 
     max-width: 230px; /* Limits the width on large screens */
+    
     margin: 0 auto 20px auto; /* Centers the container */
 }
 
