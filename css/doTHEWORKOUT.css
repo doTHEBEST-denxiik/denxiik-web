@@ -2,7 +2,7 @@
 
 
 a {
-    color: var(--secondary); /* Using purple for links for a nice contrast */
+    color: var(--secondary);
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
     position: relative;
@@ -13,37 +13,33 @@ a::after {
     position: absolute;
     left: 0;
     bottom: -3px;
-    width: 0; /* Hidden by default */
+    width: 0;
     height: 1px;
-    background: var(--primary); /* Teal underline */
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation */
+    background: var(--primary);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover {
-    color: var(--primary); /* Links turn teal on hover */
+    color: var(--primary);
     text-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
 }
 
 a:hover::after {
-    width: 100%; /* Underline appears */
+    width: 100%;
 }
 
-/* ----------------------------------------------------
-    doTHEWORKOUT SECTION (Hero)
----------------------------------------------------- */
 .development-section.doTHEWORKOUT {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
     padding: 80px 5%;
     padding-top: 10rem;
-    overflow: hidden; /* Hide overflowing elements from background effects */
+    overflow: hidden;
     background: linear-gradient(135deg, var(--light-bg) 0%, var(--mid-bg) 100%);
 }
 
-/* Futuristic Background Overlay */
 .development-section.doTHEWORKOUT .background-overlay {
     position: absolute;
     top: 0;
@@ -65,7 +61,6 @@ a:hover::after {
     100% { transform: scale(1); opacity: 0.7; }
 }
 
-/* Adding a subtle grid or line pattern */
 .development-section.doTHEWORKOUT .background-overlay::before {
     content: '';
     position: absolute;
@@ -76,17 +71,17 @@ a:hover::after {
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 50px 50px; /* Adjust grid density */
+    background-size: 50px 50px;
     opacity: 0.5;
     pointer-events: none;
 }
 
 
 .development-section.doTHEWORKOUT .content {
-    position: relative; /* Ensure content is above overlay */
+    position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 900px; /* Limit content width for readability */
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     animation: fadeInScale 1.5s ease-out forwards;
@@ -96,16 +91,16 @@ a:hover::after {
 
 .development-section.doTHEWORKOUT .title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 6em; /* Extremely large and impactful */
-    font-weight: 800; /* Extra bold */
+    font-size: 6em;
+    font-weight: 800;
     color: var(--dark-text);
-    letter-spacing: -2px; /* Tighter for modern feel */
+    letter-spacing: -2px;
     line-height: 1;
     margin-bottom: 20px;
-    text-shadow: 0 0 20px rgba(0, 188, 212, 0.3), 0 0 40px rgba(156, 39, 176, 0.2); /* Double glow */
+    text-shadow: 0 0 20px rgba(0, 188, 212, 0.3), 0 0 40px rgba(156, 39, 176, 0.2);
     background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Gradient text */
+    -webkit-text-fill-color: transparent;
     animation: textGlow 3s infinite alternate ease-in-out;
 }
 
@@ -117,49 +112,48 @@ a:hover::after {
 
 .development-section.doTHEWORKOUT .tagline {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.8em; /* Prominent tagline */
+    font-size: 1.8em;
     font-weight: 400;
     color: var(--paragraph-color);
     margin-bottom: 30px;
     opacity: 0;
-    animation: fadeIn 1s ease-out 0.8s forwards; /* Delayed fadeIn */
+    animation: fadeIn 1s ease-out 0.8s forwards;
 }
 
 
 .development-section.doTHEWORKOUT .subtitle {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.5em; /* Clear and concise */
+    font-size: 1.5em;
     font-weight: 300;
     color: var(--dark-text);
     line-height: 1.4;
-    margin-bottom: 50px; /* More space before button */
+    margin-bottom: 50px;
     opacity: 0;
-    animation: fadeIn 1s ease-out 1.2s forwards; /* Further delayed fadeIn */
+    animation: fadeIn 1s ease-out 1.2s forwards;
 }
 
-/* Primary Call to Action Button - Futuristic Style */
 .primary-cta {
-    display: inline-flex; /* Align text and icon */
+    display: inline-flex;
     align-items: center;
-    gap: 12px; /* Space between text and icon */
+    gap: 12px;
     background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
     color: white;
-    padding: 18px 40px; /* Generous padding */
-    border-radius: 50px; /* Pill shape */
-    font-size: 1.3em; /* Larger text */
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.3em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
     cursor: pointer;
     border: none;
-    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.4), 0 0 40px var(--glow-color); /* Stronger glow */
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother animation */
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.4), 0 0 40px var(--glow-color);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
-    overflow: hidden; /* For hover effects */
-    z-index: 2; /* Ensure button is above overlays */
+    overflow: hidden;
+    z-index: 2;
     opacity: 0;
-    animation: fadeInSlideUp 1s ease-out 1.6s forwards; /* Delayed entrance */
+    animation: fadeInSlideUp 1s ease-out 1.6s forwards;
 }
 
 .primary-cta::before {
@@ -175,13 +169,13 @@ a:hover::after {
 }
 
 .primary-cta:hover::before {
-    left: 100%; /* Slide effect on hover */
+    left: 100%;
 }
 
 .primary-cta:hover {
-    transform: translateY(-8px) scale(1.02); /* More pronounced lift and slight scale */
+    transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 45px rgba(0, 188, 212, 0.6), 0 0 60px var(--glow-color);
-    background: linear-gradient(45deg, #00A9C1, #8E24AA); /* Slightly shifted gradient on hover */
+    background: linear-gradient(45deg, #00A9C1, #8E24AA);
 }
 
 .primary-cta .button-icon {
@@ -190,26 +184,40 @@ a:hover::after {
 }
 
 .primary-cta:hover .button-icon {
-    transform: translateX(5px); /* Move icon on hover */
+    transform: translateX(5px);
 }
 
-/* App Screenshots Placeholder (for future images) */
+.policy-link-container {
+    margin-top: 20px;
+    z-index: 2;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1.8s forwards;
+}
+
+.privacy-policy-link {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .app-screenshots {
-    margin-top: 80px; /* More space below button */
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
     opacity: 0;
-    animation: fadeIn 1s ease-out 2s forwards; /* Delayed appearance */
+    animation: fadeIn 1s ease-out 2s forwards;
 }
 
 .app-screenshots img {
-    width: 250px; /* Example size */
+    width: 250px;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border: 3px solid rgba(0, 188, 212, 0.3); /* Subtle futuristic border */
+    border: 3px solid rgba(0, 188, 212, 0.3);
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
@@ -230,7 +238,6 @@ a:hover::after {
 }
 
 
-/* Animations */
 @keyframes fadeInScale {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
@@ -246,9 +253,6 @@ a:hover::after {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ----------------------------------------------------
-    RESPONSIVENESS
----------------------------------------------------- */
 @media (max-width: 1200px) {
     .development-section.doTHEWORKOUT .title {
         font-size: 5em;
