@@ -1,0 +1,336 @@
+/* * policy.css 
+ * Styles specific to the Privacy Policy page (Política de Privacidad).
+ * Assumes variables from a central styles.css are available (var(--primary), etc.)
+ */
+
+/* Importación de estilos base (asegura que las variables y estilos comunes estén disponibles) */
+@import url('styles.css');
+
+/* 1. Global Page Layout for Policy Content */
+
+.policy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    /* Ajustado para el padding de las páginas internas */
+    padding: 80px 5%;
+    padding-top: 10rem; /* Increased padding top to account for the header */
+    font-family: 'Outfit', sans-serif;
+    color: var(--paragraph-color);
+    line-height: 1.7;
+    background-color: var(--light-bg);
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .policy-container {
+        padding: 50px 15px;
+        padding-top: 7rem; /* Responsive padding top */
+    }
+}
+
+/* 2. Typography and Headings */
+
+.policy-container h1, .policy-container h2, .policy-container h3, .policy-container h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--dark-text);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para el título principal de la política */
+.policy-container h1 {
+    font-size: 2.8em;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--primary);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los títulos de sección (con borde distintivo) */
+.policy-container h2 {
+    font-size: 2em;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 8px;
+    margin-top: 3rem;
+    color: var(--secondary);
+}
+
+.policy-container h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: var(--dark-text);
+}
+
+.policy-container h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 1rem;
+}
+
+/* Specific styles for the div-header component */
+.div-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    padding-top: 10rem;
+}
+
+.div-header h1 {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    /* Use a gradient for the main title for better visual impact */
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none; /* Remove shadow when using text gradient */
+}
+
+.div-header strong {
+    font-weight: 900;
+}
+
+.div-header p {
+    font-size: 1.1em;
+    color: var(--paragraph-color-dark);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div-header__meta {
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--secondary);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* 3. Section Divider */
+
+.policy-container hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-light), transparent);
+    margin: 40px 0;
+}
+
+/* 4. Hyperlinks (Siguiendo tu patrón de hover con underline animado) */
+
+.policy-container a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+    /* Evita que el enlace de la política se deforme */
+    display: inline-block; 
+}
+
+.policy-container a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-container a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+.policy-container a:hover::after {
+    width: 100%;
+}
+
+/* 5. Lists and Pill Styling (for Data Types) */
+
+.policy-container ul {
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.policy-container ul li {
+    margin-bottom: 0.5rem;
+}
+
+.pills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.pill {
+    background-color: var(--accent-light);
+    color: var(--dark-text);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.unstyled-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-style-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-style-list li::before {
+    content: '\f058'; /* FontAwesome check circle icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--primary);
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.arrow-style-list {
+    list-style: none;
+    padding: 0;
+}
+
+.arrow-style-list li::before {
+    content: '\f054'; /* FontAwesome angle right icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--secondary);
+    margin-right: 10px;
+    font-size: 0.8em;
+}
+
+/* 6. Summary Card Styling */
+
+.section__summary {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.summary__card {
+    background-color: var(--mid-bg);
+    border: 1px solid var(--accent-light);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.summary__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.summary__card header {
+    border-bottom: 1px dashed var(--accent-light);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.summary__card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--primary);
+    background: none;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.summary__card-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dotted var(--accent-light);
+}
+
+.summary__card-section h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+}
+
+/* 7. Owner and Contact Section */
+
+.section__owner-and-data-controller span {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 5px;
+}
+
+/* 8. Pre-Footer Styling (Sección de Contacto Rápido) */
+
+.pre-footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 3px solid var(--primary);
+}
+
+.pre-footer h2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    text-align: center;
+    color: var(--dark-text);
+    margin-top: 0;
+    margin-bottom: 40px;
+    /* Mismo gradiente de texto que en la página de inicio */
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.summary__cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.what-you-can-do-card {
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid var(--secondary);
+}
+
+.what-you-can-do-card h3 {
+    color: var(--secondary);
+}
+
+/* 9. Mobile adjustments */
+
+@media (max-width: 500px) {
+    .policy-container h1 {
+        font-size: 2em;
+    }
+
+    .div-header h1 {
+        font-size: 2.2em;
+    }
+
+    .policy-container h2 {
+        font-size: 1.6em;
+    }
+
+    .pills-list {
+        gap: 8px;
+    }
+
+    .pill {
+        padding: 4px 8px;
+        font-size: 0.85em;
+    }
+    
+    .pre-footer h2 {
+        font-size: 1.8em;
+    }
+}
