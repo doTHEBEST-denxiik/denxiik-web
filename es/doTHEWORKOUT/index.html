@@ -4,13 +4,13 @@
 <head>
     <title>doTHEWORKOUT - Tu Futuro Fitness</title>
     <meta name="description"
-        content="Descarga doTHEWORKOUT, la app de entrenamiento gratuita que te impulsa al futuro del fitness. ¡Disponible en Play Store!">
+        content="Descarga doTHEWORKOUT, la aplicación de entrenamiento gratuita que te impulsa hacia el futuro del fitness. ¡Disponible en Play Store!">
 
     <meta property="og:url" content="https://www.denxiik.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="doTHEWORKOUT - Tu Futuro Fitness con denxiik">
     <meta property="og:description"
-        content="Descarga doTHEWORKOUT, la app de entrenamiento gratuita que te impulsa al futuro del fitness. ¡Disponible en Play Store!">
+        content="Descarga doTHEWORKOUT, la aplicación de entrenamiento gratuita que te impulsa hacia el futuro del fitness. ¡Disponible en Play Store!">
     <meta property="og:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
     <meta property="twitter:url" content="https://www.denxiik.com/">
     <meta name="twitter:title" content="doTHEWORKOUT - Tu Futuro Fitness">
     <meta name="twitter:description"
-        content="Descarga doTHEWORKOUT, la app de entrenamiento gratuita que te impulsa al futuro del fitness. ¡Disponible en Play Store!">
+        content="Descarga doTHEWORKOUT, la aplicación de entrenamiento gratuita que te impulsa hacia el futuro del fitness. ¡Disponible en Play Store!">
     <meta name="twitter:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
 
     <meta charset="UTF-8" />
@@ -37,7 +37,6 @@
     <link rel="alternate" hreflang="uk" href="https://denxiik.com/ukr/doTHEWORKOUT" />
 </head>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W58Y0ZH93S"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -58,16 +57,24 @@
                 doTHEWORKOUT
             </h1>
             <p class="tagline">
-                Transforma tu rutina. Potencia tu futuro.
+                Transforma tu rutina. Impulsa tu futuro.
             </p>
             <h2 class="subtitle">
-                Mi aplicación gratuita de entrenos.<br>
+                Mi aplicación gratuita de entrenamiento.<br>
                 Ya disponible en Play Store.
             </h2>
             <a href="https://play.google.com/store/apps/details?id=com.dothebest.workout" target="_blank"
                 class="playstore-button primary-cta">
                 <span class="button-text">Descargar Ahora</span>
                 <i class="fas fa-arrow-right button-icon"></i> </a>
+
+            <div class="policy-link-container">
+                <a href="https://www.iubenda.com/privacy-policy/98163600" target="_blank"
+                    class="privacy-policy-link">
+                    Política de Privacidad
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -78,27 +85,23 @@
 
 
 <script>
-    // Cargar con la página
     document.addEventListener('DOMContentLoaded', function () {
-        console.log("Evento 'DOMContentLoaded' disparado en index.html.");
+        console.log(" 'DOMContentLoaded' event fired in index.html.");
 
-        // Cargar primero todos los fragmentos HTML
         const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
         const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
 
         Promise.all([headerPromise, footerPromise])
             .then(() => {
-                console.log("Fragmentos HTML de encabezado y pie de página cargados exitosamente.");
+                console.log("Header and footer HTML fragments loaded successfully.");
 
                 initializeLanguageOptions();
 
             })
             .catch(error => {
-                console.error('Uno o más fragmentos HTML no se pudieron cargar:', error);
+                console.error('One or more HTML fragments could not be loaded:', error);
             });
     });
 </script>
-
-</html>
 
 </html>

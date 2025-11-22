@@ -4,13 +4,13 @@
 <head>
     <title>doTHEWORKOUT - Ваше Фітнес Майбутнє</title>
     <meta name="description"
-        content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, що просуває вас у майбутнє фітнесу. Доступно в Play Store!">
+        content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, який наближає вас до майбутнього фітнесу. Доступно в Play Store!">
 
     <meta property="og:url" content="https://www.denxiik.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="doTHEWORKOUT - Ваше Фітнес Майбутнє з denxiik">
     <meta property="og:description"
-        content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, що просуває вас у майбутнє фітнесу. Доступно в Play Store!">
+        content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, який наближає вас до майбутнього фітнесу. Доступно в Play Store!">
     <meta property="og:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
     <meta property="twitter:url" content="https://www.denxiik.com/">
     <meta name="twitter:title" content="doTHEWORKOUT - Ваше Фітнес Майбутнє">
     <meta name="twitter:description"
-        content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, що просуває вас у майбутнє фітнесу. Доступно в Play Store!">
+        content="Завантажте doTHEWORKOUT, безкоштовний додаток для тренувань, який наближає вас до майбутнього фітнесу. Доступно в Play Store!">
     <meta name="twitter:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
 
     <meta charset="UTF-8" />
@@ -37,7 +37,6 @@
     <link rel="alternate" hreflang="uk" href="https://denxiik.com/ukr/doTHEWORKOUT" />
 </head>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W58Y0ZH93S"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -58,7 +57,7 @@
                 doTHEWORKOUT
             </h1>
             <p class="tagline">
-                Змініть свою рутину. Розкрийте свій майбутній потенціал.
+                Змініть свій графік. Надайте сили своєму майбутньому.
             </p>
             <h2 class="subtitle">
                 Мій безкоштовний додаток для тренувань.<br>
@@ -67,8 +66,15 @@
             <a href="https://play.google.com/store/apps/details?id=com.dothebest.workout" target="_blank"
                 class="playstore-button primary-cta">
                 <span class="button-text">Завантажити зараз</span>
-                <i class="fas fa-arrow-right button-icon"></i>
-            </a>
+                <i class="fas fa-arrow-right button-icon"></i> </a>
+
+            <div class="policy-link-container">
+                <a href="https://www.iubenda.com/privacy-policy/98163600" target="_blank"
+                    class="privacy-policy-link">
+                    Політика конфіденційності
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -79,23 +85,21 @@
 
 
 <script>
-    // Завантажити зі сторінкою
     document.addEventListener('DOMContentLoaded', function () {
-        console.log("Подія 'DOMContentLoaded' спрацювала в index.html.");
+        console.log(" 'DOMContentLoaded' event fired in index.html.");
 
-        // Спочатку завантажити всі HTML-фрагменти
         const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
         const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
 
         Promise.all([headerPromise, footerPromise])
             .then(() => {
-                console.log("HTML-фрагменти заголовка та нижнього колонтитула успішно завантажено.");
+                console.log("Header and footer HTML fragments loaded successfully.");
 
                 initializeLanguageOptions();
 
             })
             .catch(error => {
-                console.error('Один або кілька HTML-фрагментів не вдалося завантажити:', error);
+                console.error('One or more HTML fragments could not be loaded:', error);
             });
     });
 </script>
