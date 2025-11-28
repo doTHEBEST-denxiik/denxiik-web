@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Personal Links of Interest | denxiik</title>
+    <meta name="description"
+        content="A personal collection of links to websites that have a special connection or meaning for denxiik. To share with the world.">
+
+    <meta property="og:url" content="https://www.denxiik.com/es/mis-enlaces">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="denxiik - My Links and Websites">
+    <meta property="og:description"
+        content="Explore a selection of websites I've been involved with over time.">
+    <meta property="og:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="denxiik.com">
+    <meta property="twitter:url" content="https://www.denxiik.com/es/mis-enlaces">
+    <meta name="twitter:title" content="denxiik - My Links and Websites">
+    <meta name="twitter:description"
+        content="Explore a selection of websites I've been involved with over time.">
+    <meta property="twitter:image" content="https://www.denxiik.com/img/denxiik-transparent.png">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/denxiik-transparent.png">
+    <link rel="stylesheet" href="../../css/links-of-interest.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="../../script/script.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/my-links" />
+    <link rel="alternate" hreflang="es" href="https://denxiik.com/es/mis-enlaces" />
+</head>
+
+<header id="header-placeholder"></header>
+
+<body>
+
+    <section class="links-section">
+        <div class="content">
+            <h1 class="title">
+                Pages of My Interest
+            </h1>
+            <h2 class="subtitle">
+                Websites I've been involved with.
+            </h2>
+            <p class="paragraph">
+                Here I share a collection of links to websites I have created, collaborated with,
+                or that simply have a connection with me throughout my life.
+                The sole purpose is to share them with you.
+            </p>
+            <a href="https://www.denxiik.com/es/contact" class="primary-cta">
+                <span class="button-text">Contact me if you want to chat</span>
+                <i class="fas fa-arrow-right button-icon"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="header">
+            <h2 class="title">My Collection</h2>
+            <p class="subtitle">A sample of the websites that have accompanied me.</p>
+        </div>
+
+        <div class="portfolio-grid-container">
+            <a href="https://www.igcu-castellon-vinaros-torreblanca.com/es/index/index.html" target="_blank"
+                class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-church"></i>
+                </div>
+                <h3 class="card-title">Ukrainian Greek Catholic Church</h3>
+            </a>
+
+            <a href="https://bar-vintage.web.app/es/index/" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 class="card-title">Menu Vintage Tapas</h3>
+            </a>
+
+            <a href="https://mil-sabores-heladeria.web.app/es/index/index.html" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-ice-cream"></i>
+                </div>
+                <h3 class="card-title">Mil Sabores Ice Cream Parlor</h3>
+            </a>
+
+            <a href="https://sites.google.com/view/tapasxaloc/espa%C3%B1ol/tapas" target="_blank"
+                class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-store-alt"></i>
+                </div>
+                <h3 class="card-title">Tapas Xaloc</h3>
+            </a>
+
+            <a href="https://www.denxiik.com/es/index/" target="_blank" class="portfolio-card">
+                <div class="card-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="card-title">denxiik</h3>
+            </a>
+        </div>
+    </section>
+
+</body>
+
+
+<footer id="footer-placeholder"></footer>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("Evento 'DOMContentLoaded' disparado en mis-enlaces.html.");
+
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+                console.log("Fragmentos HTML de encabezado y pie de página cargados exitosamente.");
+                if (typeof initializeLanguageOptions === 'function') {
+                    initializeLanguageOptions();
+                } else {
+                    console.warn("initializeLanguageOptions function not found. Language switching might not work.");
+                }
+            })
+            .catch(error => {
+                console.error('Uno o más fragmentos HTML no se pudieron cargar:', error);
+            });
+    });
+
+    function loadHTML(url, elementId) {
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById(elementId).innerHTML = html;
+            });
+    }
+</script>
+
+
+</html>
