@@ -40,5 +40,21 @@
     "content": "¡Noticias emocionantes! 🎉 Mi proyecto de app doTHEWORKOUT ha sido aprobado como mi Trabajo de Final de Grado (TFG) en la UOC (Grado de Ingeniería Informática).<br><br>En este video, te cuento todos los detalles sobre cómo esta aplicación, que ya está publicada en Play Store (aunque muy básica), se convierte en el pilar de mi último proyecto universitario. Estoy en el punto de partida y comparto mi planificación inicial para el semestre.<br><br>Si te interesa ver el detrás de cámaras de un TFG real, desde cero, y cómo se transforma un hobby en un proyecto académico, ¡dale al play!",
     "description": "doTHEWORKOUT - TFG en la UOC",
     "videoID": "9rGAgDGBfCk"
+  },
+  {
+    "id": "post5",
+    "title": "Avance TFG UOC - Análisis DCU //doTHEWORKOUT4",
+    "date": "2025-09-27",
+    "content": "En este video os traigo una nueva actualización del desarrollo de mi aplicación de entrenamiento físico, doTHEWORKOUT, el proyecto central de mi Trabajo Final de Grado (TFG) en la UOC.<br>Actualmente estoy inmerso en la fase de la PEC2, que se centra en el Análisis de Diseño Centrado en el Usuario (DCU) para asegurar que doTHEWORKOUT ofrezca la mejor experiencia posible.<br>En el video muestro: El Prototipo de la App: Una demostración del estado actual de la interfaz de usuario y sus funcionalidades principales. ¡Espero que os guste este vistazo a los avances! Dejadme vuestros comentarios y preguntas sobre la app o el proceso del TFG.",
+    "description": "Avance TFG UOC - Análisis DCU //doTHEWORKOUT",
+    "videoID": "jp1DYQbhoBM"
+  },
+  {
+    "id": "post6",
+    "title": "IMPLEMENTACIÓN DEL TFG (UOC) - ¿Listo para las pruebas? //doTHEWORKOUT4",
+    "date": "2025-09-27",
+    "content": "¡Una actualización rápida y muy necesaria de mi TFG en la UOC! 🚀 Ha pasado un mes desde que mi app doTHEWORKOUT fue aprobada como proyecto final, y el desarrollo está en marcha.<br>Actualmente, estoy en la fase de PEC 3 (Implementación) y el progreso ha sido brutal:¡Avance Completo! Tanto el Front-end como el Back-end de la aplicación ya están completamente desarrollados.<br>Comienzo de Pruebas: He empezado con las primeras pruebas funcionales de la app.<br>Detrás de Cámaras: Te cuento las dificultades técnicas específicas con las que me he encontrado durante la implementación y, lo más importante, las soluciones que he aplicado para superarlas.",
+    "description": "IMPLEMENTACIÓN DEL TFG (UOC) - ¿Listo para las pruebas? //doTHEWORKOUT4",
+    "videoID": "CQaODziQjnE"
   }
 ]
