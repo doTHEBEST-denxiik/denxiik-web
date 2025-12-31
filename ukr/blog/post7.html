@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сьогодні, 1 січня 2026 року, я запускаю найбільший проєкт у своєму житті</title>
+    <link rel="icon" href="../../img/logo.webp">
+
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../../script/script.js"></script>
+
+    <link rel="alternate" hreflang="en" href="https://denxiik.com/en/blog/post7.html" />
+    <link rel="alternate" hreflang="es" href="https://denxiik.com/es/blog/post7.html" />
+    <link rel="alternate" hreflang="uk" href="https://denxiik.com/ukr/blog/post7.html" />
+
+    <meta property="og:url" content="https://denxiik.com/blog/post7.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Сьогодні, 1 січня 2026 року, я запускаю найбільший проєкт у своєму житті" />
+    <meta property="og:description" content="З Новим роком та благословення кожному! Сподіваюся, що цей 2026 рік принесе здоров’я та здійснення всіх цілей. ✨" />
+    <meta property="og:image" content="https://denxiik.com/img/logo.webp" />
+    <meta property="og:image:alt" content="Сьогодні, 1 січня 2026 року, я запускаю найбільший проєкт у своєму житті" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:domain" content="denxiik.com" />
+    <meta name="twitter:url" content="https://denxiik.com/blog/post7.html" />
+    <meta name="twitter:title" content="Сьогодні, 1 січня 2026 року, я запускаю найбільший проєкт у своєму житті" />
+    <meta name="twitter:description" content="З Новим роком та благословення кожному! Сподіваюся, що цей 2026 рік принесе здоров’я та здійснення всіх цілей. ✨" />
+    <meta name="twitter:image" content="https://denxiik.com/img/logo.webp" />
+    <meta name="description" content="{{metaDescr
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src=" https://www.googletagmanager.com/gtag/js?id=G-W58Y0ZH93S">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-W58Y0ZH93S');
+    </script>
+
+    <header id="header-placeholder"></header>
+
+<body>
+
+    <main>
+        <section class="single-post-section">
+            <div id="singlePostContainer" class="single-post-container">
+            </div>
+            <a href="index.html" class="back-to-blog-button">Повернутися до всіх публікацій</a>
+        </section>
+    </main>
+
+    <script src="../../script/blog-logic.js"></script>
+</body>
+
+<footer id="footer-placeholder"></footer>
+
+<script>
+    // Завантажити зі сторінкою
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("Подія 'DOMContentLoaded' спрацювала в post.html або blog.html.");
+
+        // Спочатку завантажити всі HTML-фрагменти
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+
+        Promise.all([headerPromise, footerPromise])
+            .then(() => {
+                console.log("HTML-фрагменти заголовка та нижнього колонтитула успішно завантажено.");
+
+                initializeLanguageOptions();
+
+            })
+            .catch(error => {
+                console.error('Один або кілька HTML-фрагментів не вдалося завантажити:', error);
+            });
+    });
+</script>
+
+</html>
