@@ -14,19 +14,22 @@ const staticPages = {
         { slug: 'index', changefreq: 'monthly', priority: '1.0' },
         { slug: 'blog', changefreq: 'weekly', priority: '0.8' },
         { slug: 'contact', changefreq: 'yearly', priority: '0.5' },
-        { slug: 'links-of-interest', changefreq: 'monthly', priority: '0.5' }
+        { slug: 'links-of-interest', changefreq: 'monthly', priority: '0.5' },
+        { slug: 'kido', changefreq: 'monthly', priority: '0.7' }
     ],
     es: [
         { slug: 'index', changefreq: 'monthly', priority: '1.0' },
         { slug: 'blog', changefreq: 'weekly', priority: '0.8' },
         { slug: 'contact', changefreq: 'yearly', priority: '0.5' },
-        { slug: 'enlaces-de-interest', changefreq: 'monthly', priority: '0.5' }
+        { slug: 'enlaces-de-interest', changefreq: 'monthly', priority: '0.5' },
+        { slug: 'kido', changefreq: 'monthly', priority: '0.7' }
     ],
     ukr: [
         { slug: 'index', changefreq: 'monthly', priority: '1.0' },
         { slug: 'blog', changefreq: 'weekly', priority: '0.8' },
         { slug: 'contact', changefreq: 'yearly', priority: '0.5' },
-        { slug: 'interests', changefreq: 'monthly', priority: '0.5' }
+        { slug: 'interests', changefreq: 'monthly', priority: '0.5' },
+        { slug: 'kido', changefreq: 'monthly', priority: '0.7' }
     ]
 };
 
