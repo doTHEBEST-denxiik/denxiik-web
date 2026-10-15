@@ -182,3 +182,15 @@
         padding: 0 15px;
     }
 }
+
+/* Store links that are not live yet: shown, but not clickable */
+.store-button--soon {
+    background: #9aa3ad;
+    cursor: default;
+    pointer-events: none;
+}
+
+.store-button--soon:hover {
+    transform: none;
+    box-shadow: none;
+}
