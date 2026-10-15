@@ -194,3 +194,124 @@
     transform: none;
     box-shadow: none;
 }
+
+/* ---- Game cards with screenshots (kido page) ---- */
+.kido-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 28px;
+}
+
+.kido-card {
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 14px 34px rgba(44, 62, 80, 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kido-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 44px rgba(44, 62, 80, 0.2);
+}
+
+.kido-card-shots {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 22px 18px;
+    background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 28%, white), color-mix(in srgb, var(--accent) 8%, white));
+    scrollbar-width: none;
+}
+
+.kido-card-shots::-webkit-scrollbar {
+    display: none;
+}
+
+.kido-card-shots img {
+    height: 300px;
+    width: auto;
+    border-radius: 18px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    border: 4px solid #fff;
+}
+
+.kido-card-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 35%, white), color-mix(in srgb, var(--accent) 10%, white));
+}
+
+.kido-card-hero img {
+    border-radius: 32px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.kido-card-body {
+    padding: 22px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.kido-card .game-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.kido-card .game-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    flex: 0 0 auto;
+}
+
+.kido-card .game-title {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.kido-card .game-description {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.kido-card .game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kido-card .game-tags li {
+    background: color-mix(in srgb, var(--accent) 16%, white);
+    border-radius: 50px;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.kido-card .game-actions {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+@media (max-width: 600px) {
+    .kido-card-shots img {
+        height: 260px;
+    }
+}
