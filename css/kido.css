@@ -1,73 +1,296 @@
 @import url('links-of-interest.css');
 
-/* --- KIDO: games for kids --- */
+/* ===== KIDO: games for kids ===== */
 
-.links-section {
-    min-height: 70vh;
+:root {
+    --k-ink: #2c3e50;
+    --k-soft: #556270;
+    --k-teal: #00bcd4;
+    --k-purple: #9c27b0;
+    --k-radius: 28px;
 }
 
-#games {
-    scroll-margin-top: 60px;
-}
-
-.kido-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    max-width: 1100px;
+.kido-page {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px 80px;
 }
 
-@media (min-width: 700px) {
-    .kido-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.kido-page a::after {
+    display: none;
 }
 
-.game-card {
-    background-color: var(--light-bg);
-    border-radius: 18px;
-    box-shadow: 0 10px 30px var(--shadow-light);
-    border: 1px solid rgba(0, 188, 212, 0.15);
-    padding: 28px;
+/* The site-wide <section> style is a centered flex column with a border,
+   clipped overflow and a decorative overlay: reset it for Kido's sections. */
+.kido-hero,
+.kido-section {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.kido-section::before {
+    display: none;
+}
+
+/* ---------- Hero ---------- */
+.kido-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 48px;
+    min-height: 78vh;
+    padding: 130px 0 40px;
+}
+
+.kido-hero::before,
+.kido-hero::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    background-image: none;
+    animation: none;
+}
+
+.kido-hero::before {
+    width: 380px;
+    height: 380px;
+    top: 40px;
+    left: -120px;
+    background: rgba(0, 188, 212, 0.3);
+}
+
+.kido-hero::after {
+    width: 420px;
+    height: 420px;
+    right: -140px;
+    bottom: -60px;
+    background: rgba(156, 39, 176, 0.22);
+}
+
+.kido-eyebrow {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--k-purple);
+    background: rgba(156, 39, 176, 0.1);
+    border: 1px solid rgba(156, 39, 176, 0.18);
+}
+
+.kido-title {
+    margin: 14px 0 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(3.6rem, 10vw, 6.4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    background: linear-gradient(45deg, var(--k-teal), var(--k-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.kido-subtitle {
+    margin: 0 0 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.8rem);
+    line-height: 1.25;
+    color: var(--k-ink);
+}
+
+.kido-lead {
+    max-width: 560px;
+    margin: 0 0 26px;
+    font-size: 1.1rem;
+    color: var(--k-soft);
+}
+
+.kido-cta-row {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.kido-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.05rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kido-cta-primary {
+    color: #fff;
+    background: linear-gradient(45deg, var(--k-teal), var(--k-purple));
+    box-shadow: 0 10px 24px rgba(0, 188, 212, 0.35);
+}
+
+.kido-cta-primary:hover {
+    color: #fff;
+    text-shadow: none;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(156, 39, 176, 0.35);
+}
+
+.kido-cta-ghost {
+    color: var(--k-ink);
+    background: #fff;
+    border: 2px solid rgba(44, 62, 80, 0.12);
+}
+
+.kido-cta-ghost:hover {
+    color: var(--k-purple);
+    text-shadow: none;
+    transform: translateY(-3px);
+}
+
+.kido-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kido-badges li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--k-ink);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+}
+
+.kido-badges i {
+    color: var(--k-teal);
+}
+
+/* floating icon collage */
+.kido-hero-art {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    opacity: 0;
-    animation: fadeInSlideUp 1.2s ease-out forwards;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 480px;
+    width: 100%;
+    margin-left: auto;
+    padding: 20px 0 30px;
 }
 
-.game-card:nth-child(1) { animation-delay: 0.2s; }
-.game-card:nth-child(2) { animation-delay: 0.4s; }
-.game-card:nth-child(3) { animation-delay: 0.6s; }
-.game-card:nth-child(4) { animation-delay: 0.8s; }
-
-.game-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 188, 212, 0.3);
+.kido-art-icon {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 24%;
+    box-shadow: 0 12px 26px rgba(44, 62, 80, 0.22);
+    border: 3px solid #fff;
+    background: #fff;
+    animation: kidoFloat 5s ease-in-out infinite;
 }
 
+.kido-art-1 { --r: -5deg; animation-delay: 0s; }
+.kido-art-2 { --r: 4deg;  animation-delay: -0.8s; margin-top: 22px; }
+.kido-art-3 { --r: -3deg; animation-delay: -1.6s; }
+.kido-art-4 { --r: 5deg;  animation-delay: -2.4s; margin-top: 22px; }
+.kido-art-5 { --r: 4deg;  animation-delay: -3.2s; margin-top: 10px; }
+.kido-art-6 { --r: -5deg; animation-delay: -4s; margin-top: 32px; }
+.kido-art-7 { --r: 3deg;  animation-delay: -1.2s; margin-top: 10px; }
+.kido-art-8 { --r: -4deg; animation-delay: -2s; margin-top: 32px; }
+
+@keyframes kidoFloat {
+    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+    50% { transform: translateY(-10px) rotate(var(--r, 0deg)); }
+}
+
+/* ---------- Sections ---------- */
+.kido-section {
+    padding: 36px 0;
+    scroll-margin-top: 90px;
+}
+
+.kido-section-head {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.kido-section-head h2 {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--k-ink);
+}
+
+.kido-section-head p {
+    margin: 12px 0 0;
+    font-size: 1.1rem;
+    color: var(--k-soft);
+}
+
+.kido-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: #fff;
+}
+
+.kido-pill-live {
+    background: linear-gradient(45deg, #2ecc71, #1fa463);
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.35);
+}
+
+.kido-pill-soon {
+    background: linear-gradient(45deg, #ffb347, #ff8a5c);
+    box-shadow: 0 8px 20px rgba(255, 138, 92, 0.35);
+}
+
+/* ---------- Shared bits of a game ---------- */
 .game-head {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
 }
 
 .game-icon {
-    width: 88px;
-    height: 88px;
-    border-radius: 22px;
-    flex-shrink: 0;
-    box-shadow: 0 6px 16px var(--shadow-light);
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    flex: 0 0 auto;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .game-title {
+    margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.6em;
+    font-size: 1.5rem;
     font-weight: 800;
-    color: var(--dark-text);
     line-height: 1.2;
+    color: var(--k-ink);
 }
 
 .game-age {
@@ -75,45 +298,43 @@
     margin-top: 6px;
     padding: 2px 12px;
     border-radius: 50px;
-    font-size: 0.9em;
+    font-size: 0.85rem;
     font-weight: 700;
-    color: white;
-    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    color: #fff;
+    background: linear-gradient(45deg, var(--k-teal), var(--k-purple));
 }
 
 .game-description {
-    color: var(--paragraph-color);
-    font-size: 1.05em;
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--k-soft);
 }
 
 .game-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .game-tags li {
     padding: 4px 12px;
     border-radius: 50px;
-    font-size: 0.85em;
-    font-weight: 600;
-    color: var(--accent-purple);
-    background: rgba(156, 39, 176, 0.08);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--k-ink);
+    background: color-mix(in srgb, var(--accent, #00bcd4) 18%, white);
 }
 
 .game-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
     margin-top: auto;
-}
-
-.game-actions a::after {
-    display: none;
 }
 
 .store-button {
@@ -122,14 +343,14 @@
     gap: 10px;
     padding: 12px 24px;
     border-radius: 50px;
-    background: var(--dark-text);
-    color: white;
-    font-weight: 700;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--k-ink);
+    color: #fff;
+    font-weight: 800;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .store-button:hover {
-    color: white;
+    color: #fff;
     text-shadow: none;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(44, 62, 80, 0.35);
@@ -139,76 +360,110 @@
     font-size: 1.2em;
 }
 
-.policy-link {
-    font-size: 0.95em;
-    font-weight: 600;
-}
-
-.kido-parents {
-    max-width: 800px;
-    margin: 60px auto 0;
-    text-align: center;
-    color: var(--paragraph-color);
-}
-
-.kido-parents h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.6em;
-    color: var(--dark-text);
-    margin-bottom: 12px;
-}
-
-@media (max-width: 768px) {
-    .kido-grid {
-        padding: 0 15px;
-        gap: 20px;
-    }
-
-    .game-card {
-        padding: 22px;
-    }
-
-    .game-icon {
-        width: 72px;
-        height: 72px;
-        border-radius: 18px;
-    }
-
-    .game-title {
-        font-size: 1.35em;
-    }
-
-    .kido-parents {
-        padding: 0 15px;
-    }
-}
-
-/* Store links that are not live yet: shown, but not clickable */
 .store-button--soon {
     background: #9aa3ad;
     cursor: default;
     pointer-events: none;
 }
 
-.store-button--soon:hover {
-    transform: none;
-    box-shadow: none;
+.policy-link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--k-purple);
 }
 
-/* ---- Game cards with screenshots (kido page) ---- */
+.policy-link:hover {
+    text-decoration: underline;
+}
+
+/* screenshot strip (swipe sideways) */
+.kido-card-shots {
+    display: flex;
+    gap: 12px;
+    height: 270px;
+    padding: 20px 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: linear-gradient(160deg,
+        color-mix(in srgb, var(--accent, #00bcd4) 32%, white),
+        color-mix(in srgb, var(--accent, #00bcd4) 8%, white));
+    -webkit-mask-image: linear-gradient(to right, #000 90%, transparent);
+    mask-image: linear-gradient(to right, #000 90%, transparent);
+}
+
+.kido-card-shots::-webkit-scrollbar {
+    display: none;
+}
+
+.kido-card-shots img {
+    height: 100%;
+    width: auto;
+    flex: 0 0 auto;
+    object-fit: cover;
+    scroll-snap-align: start;
+    border: 4px solid #fff;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Out now: featured game ---------- */
+.kido-featured {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.85fr) 1.15fr;
+    overflow: hidden;
+    border-radius: 32px;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(44, 62, 80, 0.16);
+}
+
+.kido-featured-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 36px;
+}
+
+.kido-featured .game-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 24px;
+}
+
+.kido-featured .game-title {
+    font-size: 1.9rem;
+}
+
+.kido-featured-shots {
+    height: auto;
+    min-height: 340px;
+    align-items: center;
+    padding: 28px 24px;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.kido-featured-shots img {
+    height: 300px;
+}
+
+/* ---------- Coming soon: card grid ---------- */
 .kido-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 28px;
 }
 
 .kido-card {
-    background: #fff;
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 14px 34px rgba(44, 62, 80, 0.12);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--k-radius);
+    background: #fff;
+    box-shadow: 0 14px 34px rgba(44, 62, 80, 0.12);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -217,101 +472,190 @@
     box-shadow: 0 22px 44px rgba(44, 62, 80, 0.2);
 }
 
-.kido-card-shots {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 22px 18px;
-    background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 28%, white), color-mix(in srgb, var(--accent) 8%, white));
-    scrollbar-width: none;
-}
-
-.kido-card-shots::-webkit-scrollbar {
-    display: none;
-}
-
-.kido-card-shots img {
-    height: 300px;
-    width: auto;
-    border-radius: 18px;
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-    border: 4px solid #fff;
-}
-
-.kido-card-hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 35%, white), color-mix(in srgb, var(--accent) 10%, white));
-}
-
-.kido-card-hero img {
-    border-radius: 32px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-}
-
 .kido-card-body {
-    padding: 22px 24px 26px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 12px;
-    flex: 1;
+    padding: 22px 24px 26px;
 }
 
-.kido-card .game-head {
-    display: flex;
+/* ---------- Values ---------- */
+.kido-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.kido-value {
+    padding: 26px 24px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(44, 62, 80, 0.1);
+}
+
+.kido-value-icon {
+    display: inline-flex;
     align-items: center;
-    gap: 14px;
-}
-
-.kido-card .game-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 18px;
-    flex: 0 0 auto;
-}
-
-.kido-card .game-title {
-    margin: 0;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 14px;
+    border-radius: 16px;
     font-size: 1.4rem;
+    color: #fff;
+    background: linear-gradient(45deg, var(--k-teal), var(--k-purple));
 }
 
-.kido-card .game-description {
+.kido-value h3 {
+    margin: 0 0 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--k-ink);
+}
+
+.kido-value p {
     margin: 0;
     line-height: 1.5;
+    color: var(--k-soft);
 }
 
-.kido-card .game-tags {
+/* ---------- Parents ---------- */
+.kido-parents {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.kido-card .game-tags li {
-    background: color-mix(in srgb, var(--accent) 16%, white);
-    border-radius: 50px;
-    padding: 4px 12px;
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.kido-card .game-actions {
-    margin-top: auto;
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 14px;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 34px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.12), rgba(156, 39, 176, 0.12));
+    border: 1px solid rgba(0, 188, 212, 0.2);
 }
 
+.kido-parents-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    font-size: 1.8rem;
+    color: #fff;
+    background: linear-gradient(45deg, var(--k-teal), var(--k-purple));
+}
+
+.kido-parents h3 {
+    margin: 0 0 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--k-ink);
+}
+
+.kido-parents p {
+    margin: 0;
+    line-height: 1.55;
+    color: var(--k-soft);
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1000px) {
+    .kido-hero {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        min-height: 0;
+        padding-top: 120px;
+        text-align: center;
+    }
+
+    .kido-lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .kido-cta-row,
+    .kido-badges {
+        justify-content: center;
+    }
+
+    .kido-hero-art {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .kido-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .kido-featured-info {
+        padding: 28px 26px 8px;
+    }
+
+    .kido-featured-shots {
+        min-height: 0;
+    }
+}
+
+/* ---------- Phone ---------- */
 @media (max-width: 600px) {
-    .kido-card-shots img {
-        height: 260px;
+    .kido-page {
+        padding: 0 14px 60px;
+    }
+
+    .kido-hero {
+        padding-top: 104px;
+    }
+
+    .kido-hero-art {
+        gap: 10px;
+        max-width: 340px;
+    }
+
+    .kido-badges li {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .kido-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .kido-card-shots {
+        height: 230px;
+        padding: 16px 14px;
+    }
+
+    .kido-featured-shots img {
+        height: 230px;
+    }
+
+    .kido-featured-info {
+        padding: 24px 20px 6px;
+    }
+
+    .kido-featured .game-title {
+        font-size: 1.6rem;
+    }
+
+    .kido-parents {
+        flex-direction: column;
+        padding: 26px 22px;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kido-art-icon {
+        animation: none;
+    }
+
+    .kido-card,
+    .kido-cta,
+    .store-button {
+        transition: none;
     }
 }
