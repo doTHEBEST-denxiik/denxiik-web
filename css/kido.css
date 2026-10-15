@@ -760,3 +760,19 @@
         transition: none;
     }
 }
+
+/* Coming-soon card without screenshots: the icon sits on a colored panel */
+.kido-card-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background: linear-gradient(160deg,
+        color-mix(in srgb, var(--accent, #00bcd4) 35%, white),
+        color-mix(in srgb, var(--accent, #00bcd4) 10%, white));
+}
+
+.kido-card-hero img {
+    border-radius: 32px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
