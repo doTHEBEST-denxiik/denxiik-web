@@ -186,12 +186,12 @@
     color: var(--k-teal);
 }
 
-/* floating icon collage */
+/* floating icon collage: nine games, three by three */
 .kido-hero-art {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    max-width: 480px;
+    max-width: 420px;
     width: 100%;
     margin-left: auto;
     padding: 20px 0 30px;
@@ -211,11 +211,12 @@
 .kido-art-1 { --r: -5deg; animation-delay: 0s; }
 .kido-art-2 { --r: 4deg;  animation-delay: -0.8s; margin-top: 22px; }
 .kido-art-3 { --r: -3deg; animation-delay: -1.6s; }
-.kido-art-4 { --r: 5deg;  animation-delay: -2.4s; margin-top: 22px; }
-.kido-art-5 { --r: 4deg;  animation-delay: -3.2s; margin-top: 10px; }
-.kido-art-6 { --r: -5deg; animation-delay: -4s; margin-top: 32px; }
-.kido-art-7 { --r: 3deg;  animation-delay: -1.2s; margin-top: 10px; }
-.kido-art-8 { --r: -4deg; animation-delay: -2s; margin-top: 32px; }
+.kido-art-4 { --r: 5deg;  animation-delay: -2.4s; }
+.kido-art-5 { --r: 4deg;  animation-delay: -3.2s; margin-top: 22px; }
+.kido-art-6 { --r: -5deg; animation-delay: -4s; }
+.kido-art-7 { --r: 3deg;  animation-delay: -1.2s; }
+.kido-art-8 { --r: -4deg; animation-delay: -2s; margin-top: 22px; }
+.kido-art-9 { --r: 5deg;  animation-delay: -2.8s; }
 
 @keyframes kidoFloat {
     0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
@@ -691,7 +692,7 @@
 
     .kido-hero-art {
         gap: 10px;
-        max-width: 340px;
+        max-width: 290px;
     }
 
     .kido-badges li {
@@ -759,20 +760,4 @@
     .store-button {
         transition: none;
     }
-}
-
-/* Coming-soon card without screenshots: the icon sits on a colored panel */
-.kido-card-hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    background: linear-gradient(160deg,
-        color-mix(in srgb, var(--accent, #00bcd4) 35%, white),
-        color-mix(in srgb, var(--accent, #00bcd4) 10%, white));
-}
-
-.kido-card-hero img {
-    border-radius: 32px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
