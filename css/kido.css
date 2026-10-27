@@ -186,12 +186,12 @@
     color: var(--k-teal);
 }
 
-/* floating icon collage: nine games, three by three */
+/* floating icon collage: ten games, five by two */
 .kido-hero-art {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    max-width: 420px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    max-width: 520px;
     width: 100%;
     margin-left: auto;
     padding: 20px 0 30px;
@@ -217,6 +217,7 @@
 .kido-art-7 { --r: 3deg;  animation-delay: -1.2s; }
 .kido-art-8 { --r: -4deg; animation-delay: -2s; margin-top: 22px; }
 .kido-art-9 { --r: 5deg;  animation-delay: -2.8s; }
+.kido-art-10 { --r: -4deg; animation-delay: -3.6s; margin-top: 22px; }
 
 @keyframes kidoFloat {
     0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
@@ -663,7 +664,7 @@
     }
 
     .kido-hero-art {
-        max-width: 420px;
+        max-width: 520px;
         margin: 0 auto;
     }
 
@@ -691,8 +692,8 @@
     }
 
     .kido-hero-art {
-        gap: 10px;
-        max-width: 290px;
+        gap: 8px;
+        max-width: 330px;
     }
 
     .kido-badges li {
