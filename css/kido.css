@@ -523,6 +523,11 @@
     height: 290px;
 }
 
+/* Out now: stacked featured games need room between them. */
+.kido-featured + .kido-featured {
+    margin-top: 32px;
+}
+
 /* ---------- Coming soon: card grid ---------- */
 .kido-grid {
     display: grid;
