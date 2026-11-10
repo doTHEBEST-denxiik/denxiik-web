@@ -186,7 +186,7 @@
     color: var(--k-teal);
 }
 
-/* floating icon collage: eleven games, six by two */
+/* floating icon collage: twelve games, six by two */
 .kido-hero-art {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -219,6 +219,7 @@
 .kido-art-9 { --r: 5deg;  animation-delay: -2.8s; }
 .kido-art-10 { --r: -4deg; animation-delay: -3.6s; margin-top: 22px; }
 .kido-art-11 { --r: 5deg;  animation-delay: -4.4s; }
+.kido-art-12 { --r: -4deg; animation-delay: -5.2s; margin-top: 22px; }
 
 @keyframes kidoFloat {
     0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
