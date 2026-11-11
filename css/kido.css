@@ -773,3 +773,103 @@
         transition: none;
     }
 }
+
+/* ---------- Topics: chip nav + one section per category ---------- */
+.kido-topics { padding-bottom: 8px; }
+
+.kido-chips {
+    position: sticky;
+    top: 70px;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.12);
+}
+
+.kido-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--k-ink);
+    background: #f1f5f9;
+    transition: background .2s, color .2s, transform .2s;
+}
+
+.kido-chip span {
+    min-width: 22px;
+    padding: 0 7px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    background: linear-gradient(45deg, var(--k-teal), var(--k-purple));
+}
+
+.kido-chip:hover { background: #e2e8f0; transform: translateY(-2px); }
+
+.kido-cat { padding-top: 28px; }
+
+.kido-cat-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid #eef2f6;
+}
+
+.kido-cat-head h2 {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.4rem, 3.4vw, 2rem);
+    color: var(--k-ink);
+}
+
+.kido-cat-head p { margin: 4px 0 0; color: var(--k-soft); }
+
+.kido-cat-icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    font-size: 1.4rem;
+    color: #fff;
+    background: linear-gradient(45deg, var(--k-teal), var(--k-purple));
+}
+
+.kido-cat > .kido-featured { margin-bottom: 28px; }
+.kido-cat > .kido-featured + .kido-featured { margin-top: 0; }
+
+.kido-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 6px 0 0 6px;
+    padding: 2px 10px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    vertical-align: top;
+}
+.kido-status-live { color: #137a45; background: #dff7ea; }
+.kido-status-soon { color: #b3541f; background: #ffeedd; }
+
+@media (max-width: 600px) {
+    .kido-chips { position: static; justify-content: flex-start; }
+    .kido-cat-icon { width: 44px; height: 44px; font-size: 1.15rem; border-radius: 14px; }
+}
