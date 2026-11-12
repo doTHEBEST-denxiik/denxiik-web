@@ -225,6 +225,10 @@
 .kido-art-15 { --r: 4deg;  animation-delay: -7.6s; }
 .kido-art-16 { --r: -4deg; animation-delay: -8.4s; margin-top: 22px; }
 .kido-art-17 { --r: 4deg;  animation-delay: -9.2s; }
+.kido-art-18 { --r: -4deg; animation-delay: -10s; margin-top: 22px; }
+.kido-art-19 { --r: 4deg;  animation-delay: -10.8s; }
+.kido-art-20 { --r: -4deg; animation-delay: -11.6s; margin-top: 22px; }
+.kido-art-21 { --r: 4deg;  animation-delay: -12.4s; }
 
 @keyframes kidoFloat {
     0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
